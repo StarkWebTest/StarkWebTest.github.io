@@ -1,10 +1,10 @@
  app.config(['$routeProvider', function($routeProvider) {
 
      $routeProvider
-        .when('/Home', {
+        .when('/Dashboard', {
             templateUrl: 'views/DashView.html'
         })
         .otherwise({
-            redirectTo: '/Home'
+            redirectTo: '/Dashboard'
         })
  }]);
