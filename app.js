@@ -1,2 +1,2 @@
-var app = angular.module('Portfolio',['ngRoute']);
+var app = angular.module('Syncretics',['ngRoute']);
 
