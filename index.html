@@ -98,9 +98,14 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
                 <div class="row">
-                    <div ng-view />
+                    <div class="col-lg-1">
+                        <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-lg-11">
+                        <div ng-view />
+                    </div>
                 </div>
             </div>
         </div>
