@@ -19,7 +19,7 @@
     margin-left: -250px;
     overflow-y: auto;
     
-    background: #2196F3;
+    background: #cc5500;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -68,7 +68,7 @@
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: #2196F3;
+    background: #cc5500;
 }
 
 .sidebar-nav li a:active,
