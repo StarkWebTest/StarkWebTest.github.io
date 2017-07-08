@@ -66,6 +66,7 @@
     display: block;
     text-decoration: none;
     color:white;
+    font-size: 25px;
 }
 
 .sidebar-nav li a:hover {
