@@ -28,7 +28,7 @@
     .container-fluid .jumbotron-body,
     .container-fluid .jumbotron-action {
         border-radius: 0px;
-        padding: 10px;
+        padding: 0px;
     }
 
     .jumbotron .nav>li>a {
