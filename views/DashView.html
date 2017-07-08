@@ -117,78 +117,13 @@
 </style>
 
 <script>
-    $(document).ready(function () {
-    
-    //Google Maps API
-    $.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyC5Ofojq1_OlUTyiYwxcUcirjWmJFyLZ6A', function () {
-
-        initMap();
-
-        function initMap() {
-            // Init Map
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 26.831239, lng: -80.094991 },
-                zoom: 15
-            });
-
-            markerBounds = new google.maps.LatLngBounds();
-
-            pullMarkers();
-        }
-
-        // Stop marker animation on map click
-        function stopAnimation() {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            }
-            infoWindow.close();
-        }
-
-        // Toggle Marker Bounce
-        function toggleBounce() {
-            if (marker.getAnimation() !== null) {
-                marker.setAnimation(null);
-            } else {
-                marker.setAnimation(google.maps.Animation.BOUNCE);
-            }
-        }
- 
-        /*function pullMarkers() {
-            var mapImageElement = document.getElementById("loading_deviceMapMarkers");
-            mapImageElement.style.visibility = 'visible';
-
-            theUrl = curr.restURL + "/api/database/UI_PullDeviceLocations?cust_ID=" + curr.cust.ID;
-
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange =
-                function () {
-                    if (xhttp.readyState == 4 && xhttp.status == 200) {
-
-                        //Requires doing it twice... i donno why 
-                        var preParse = JSON.parse(xhttp.responseText);
-                        deviceLocations = JSON.parse(preParse);
-
-                        // Marker
-                        //var image = 'https://maps.google.com/mapfiles/kml/paddle/B.png';
-                        // https://s22.postimg.org/ykaouh8xt/honeycomb_Inactive.png
-                        // https://s15.postimg.org/o600yhs6z/honeycomb_Alert.png
-
-                        addMarkers();
-                        //var image = 'https://s11.postimg.org/uwi92cedf/honeycomb.png';
-
-                        map.fitBounds(markerBounds);
-
-                        map.addListener('click', stopAnimation);
-
-                        addInfoWindow(marker);
-
-                        mapImageElement.style.visibility = "hidden";
-                    }
-                };
-            xhttp.open("GET", theUrl, true);
-            xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
-            xhttp.send();
-        } */
-    });
-});
+   var map;
+   function initMap(){
+       map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 2,
+           center: new google.maps.LatLng(26.831239,26.831239),
+           mapTypeId: 'terrain'
+       });
+   }
 </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC-IzPa-FPY3XcJOmgoeyiR0jbftFWFb4&callback=initMap"></script>
