@@ -6,6 +6,7 @@
         padding-top: 0px;
         padding-bottom: 0px;
         margin-top: 20px;
+        padding: 10px;
         margin-bottom: 0px;
     }
 
@@ -17,6 +18,7 @@
         padding-bottom: 0px;
         margin-top: 10px;
         margin-bottom: 50px;
+        padding: 10px;
     }
 
     .jumbotron-action {
@@ -32,6 +34,7 @@
         border-radius: 0px;
         padding-left: 0px;
         padding-right: 0px;
+        
     }
 
     .jumbotron .nav>li>a {
