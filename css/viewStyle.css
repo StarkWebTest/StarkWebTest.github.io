@@ -1,0 +1,44 @@
+.jumbotron-title {
+        text-align: center;
+        background-color: #cc5500;
+        color: white;
+        box-shadow: 0 10px 19px rgba(0, 0, 0, 0.25), 0 0px 3px rgba(0, 0, 0, 0.22);
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    .jumbotron-body {
+        text-align: center;
+        background-color: white;
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25), 0 0px 3px rgba(0, 0, 0, 0.22);
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+    }
+
+    .jumbotron-action {
+        text-align: center;
+        background-color: white;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .container-fluid .jumbotron-title,
+    .container-fluid .jumbotron-body,
+    .container-fluid .jumbotron-action {
+        border-radius: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .jumbotron .nav>li>a {
+        cursor: pointer;
+        color: white;
+    }
+
+    #map {
+        height: 100%;
+    }
