@@ -13,7 +13,7 @@
                 </li>
             </ul>
         </div>
-        <div class="jumbotron jumbotron-body collapse" id="Configuration">
+        <div class="jumbotron jumbotron-body" id="Configuration">
             Testing 
         </div>
 
@@ -28,23 +28,24 @@
                 </li>
             </ul>
         </div>
-        <div class="jumbotron jumbotron-body collapse" id="DataSelection">
-            Testing
+        <div class="jumbotron jumbotron-body" id="DataSelection">
+            <ul class="nav">
+                <li >
+                    <a class="active" href="/#/Temperature">
+                        Temperature
+                    </a>
+                </li>
+                <li>
+                    <a href="/#/Humidity">
+                        Humitdity
+                    </a>
+                </li>
+            </ul>
         </div>
 
     </div>
 
     <div class="col-lg-8">
-        <div class="jumbotron jumbotron-title">
-            <ul class="nav">
-                <li>
-                    <a data-toggle="collapse" data-target="#deviceMap">
-                        <span>
-                            <i class="fa fa-bar-chart" aria-hidden="true"></i> Temperature
-                        </span>  
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <div ng-view/>
     </div>
 </div>
