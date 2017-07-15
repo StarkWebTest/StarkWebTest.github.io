@@ -1,12 +1,13 @@
-    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol'></script>
-    <script type='text/javascript'>
-        function loadMapScenario() {
-            var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
-                credentials: 'AkirmzzM2t5czgCzL5w1Qoels0_rhGHWZmslFCZP93qcUgR3Uh9xDSgAL62wRrBc'
-            });
+<script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol'></script>
+<script type='text/javascript'>
+    function loadMapScenario() {
+        var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+            credentials: 'AkirmzzM2t5czgCzL5w1Qoels0_rhGHWZmslFCZP93qcUgR3Uh9xDSgAL62wRrBc'
+        });
 
-        }
-    </script>
+    }
+
+</script>
 
 <div class="container-fluid" onload='loadMapScenario();'>
     <h3 class="page-title">DashBoard</h3>
@@ -19,7 +20,7 @@
                 </li>
             </ul>
         </div>
-        <div class="jumbotron-body collapse in" id="WatchList" >
+        <div class="jumbotron-body collapse in" id="WatchList">
             <table class="table">
                 <thead>
                     <tr valign="middle" halign="middle">
@@ -75,8 +76,7 @@
         </div>
     </div>
 
-    
+
 </div>
-<div class="col-lg-offset-1 col-lg-10" style="margin-top: 30px;">
-    <div id='myMap' style='width: 100; height: 100;'></div>
-</div>
+
+<div id='myMap' style='width: 100; height: 100;'></div>
