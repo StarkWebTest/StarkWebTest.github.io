@@ -69,6 +69,17 @@
 
 </div>
 
-<div class="col-lg-offset-1 col-lg-9">
-    <ng-map center="[40.74, -74.18]"></ng-map>
+<div class="col-lg-offset-1 col-lg-10">
+    <div class="jumbotron jumbotron-title">
+        <ul class="nav">
+            <li>
+                <a data-toggle="collapse" data-target="#deviceMap"><span>Device Map</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="jumbotron jumbotron-body collapse in" id="deviceMap">
+        <ng-map center="[40.74, -74.18]"></ng-map>
+    </div>
+    
 </div>
