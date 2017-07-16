@@ -1,1 +1,1 @@
-var app = angular.module('Testing',['ngRoute','ngMap','dateRangePicker']);
+var app = angular.module('Testing',['ngRoute','ngMap']);
