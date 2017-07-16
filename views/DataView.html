@@ -104,10 +104,10 @@ $(function() {
     var end = moment();
 
     function cb(start, end) {
-        $('input[name="daterange"]').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        $('input[name="dateRange"]').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
     }
 
-    $('input[name="daterange"]').daterangepicker({
+    $('input[name="dateRange"]').daterangepicker({
         startDate: start,
         endDate: end,
         ranges: {
