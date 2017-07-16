@@ -1,3 +1,7 @@
+<div id="dateRange">
+    <i class="fa fa-calendar" aria-hidden="true"></i><span></span>
+</div>
+
 <div class="container-fluid">
     <h3 class="page-title">Device Data</h3>
     <hr>
@@ -16,10 +20,7 @@
         <div class="jumbotron jumbotron-body collapse in" id="Configuration">
             </br>
             <h4 style="color: #cc5500">Date Range:</h4>
-            <div id="dateRange">
-                <i class="fa fa-calendar" aria-hidden="true"></i><span></span>
-                
-            </div>
+
             </br>
             </br>
 
@@ -92,6 +93,8 @@
     </div>
 </div>
 
+
+
 <style>
     .jumbotron-body .nav>li>a {
         cursor: pointer;
@@ -100,29 +103,30 @@
 </style>
 
 <script type="text/javascript">
-$(function() {
+    $(function () {
 
-    var start = moment().subtract(29, 'days');
-    var end = moment();
+        var start = moment().subtract(29, 'days');
+        var end = moment();
 
-    function cb(start, end) {
-        $('#dateRange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-    }
-
-    $('#dateRange').daterangepicker({
-        startDate: start,
-        endDate: end,
-        ranges: {
-           'Today': [moment(), moment()],
-           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-           'This Month': [moment().startOf('month'), moment().endOf('month')],
-           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        function cb(start, end) {
+            $('#dateRange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         }
-    }, cb);
 
-    cb(start, end);
-    
-});
+        $('#dateRange').daterangepicker({
+            startDate: start,
+            endDate: end,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+        }, cb);
+
+        cb(start, end);
+
+    });
+
 </script>
