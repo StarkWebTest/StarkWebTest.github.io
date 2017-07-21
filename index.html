@@ -133,9 +133,9 @@
 
                 <div class="col l8 s12">
                     <ul class="collapsible popout" data-collapsible="expandable">
-                        <li onclick="ViewMap()">
-                            <div class="collapsible-header"><i class="material-icons">map</i>Device Map</div>
-                            <div class="collapsible-body" id="showMap">
+                        <li>
+                            <div class="collapsible-header active"><i class="material-icons">map</i>Device Map</div>
+                            <div class="collapsible-body" >
                                 <span>
                                     <div id="map"></div>
                                 </span>
@@ -205,11 +205,6 @@
                 position: uluru,
                 map: map
             });
-        }
-
-        function ViewMap(){
-            $('#showMap').Show();
-            initMap();
         }
 
         (function ($) {
