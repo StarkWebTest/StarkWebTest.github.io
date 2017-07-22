@@ -45,7 +45,7 @@
     #alerts {
         text-align: center;
         border-color: transparent;
-        color:white;
+        color: white;
         font-size: 20px;
         padding: 5px;
         background-color: #EF5350;
@@ -72,7 +72,8 @@
         border-color: transparent;
     }
 
-    #mapSection, #tableSection {
+    #mapSection,
+    #tableSection {
         padding: 5px;
     }
 
@@ -80,7 +81,7 @@
         background-color: #cc5500;
         border-color: transparent;
     }
-    
+
     #Good {
         color: #4CAF50;
     }
@@ -146,7 +147,7 @@
                         </li>
                         <li>
                             <div class="collapsible-header active"><i class="material-icons">network_cell</i>Device Status (Last 24 Hours)</div>
-                            <div class="collapsible-body" id="status"> 
+                            <div class="collapsible-body" id="status">
                                 <span>
                                     <p>42 Active Devices</p>
                                     <p>3 Inactive Devices</p>
@@ -218,8 +219,17 @@
                             <div class="collapsible-header active"><i class="material-icons">settings</i>Data Configurations</div>
                             <div class="collapsible-body" id="dataConfig">
                                 <div class="row">
-                                    <div class="col l3 s12" >
+                                    <div class="col l3 s12">
                                         <p>Date Range</p>
+                                        <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Predefined Range Options</a>
+                                        <ul id='dropdown1' class='dropdown-content'>
+                                            <li><a href="#!">one</a></li>
+                                            <li><a href="#!">two</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#!">three</a></li>
+                                            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                                            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                                        </ul>
                                         <div class="row">
                                             <div class="col l6 s6">
                                                 <p>From Date</p>
@@ -230,7 +240,7 @@
                                                 <input type="text" class="datepicker" />
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <div class="col l3 s12">
                                         <p>Device Plot Options</p>
@@ -239,7 +249,8 @@
                                         <p>Chart Type</p>
                                     </div>
                                     <div class="col l3 s12">
-                                        <p>Time Intervals<p>
+                                        <p>Time Intervals
+                                            <p>
                                     </div>
                                 </div>
                             </div>
