@@ -67,6 +67,10 @@
         align-content: center;
         border-color: transparent;
     }
+
+    #mapSection, #tableSection {
+        padding: 5px;
+    }
 </style>
 
 
@@ -134,7 +138,7 @@
                         </li>
                         <li>
                             <div class="collapsible-header active"><i class="material-icons">remove_red_eye</i>Watch List</div>
-                            <div class="collapsible-body">
+                            <div class="collapsible-body" id="tableSection">
                                 <table class="table">
                                     <thead>
                                         <tr valign="middle" halign="middle">
@@ -159,7 +163,7 @@
                     <ul class="collapsible popout" data-collapsible="expandable">
                         <li>
                             <div class="collapsible-header active"><i class="material-icons">map</i>Device Map</div>
-                            <div class="collapsible-body">
+                            <div class="collapsible-body" id="mapSection">
                                 <span>
                                     <div id="map"></div>
                                 </span>
