@@ -38,10 +38,9 @@
 
     #map {
         height: 400px;
-        overflow:visible;
+        overflow: visible;
         width: 100%;
     }
-    
 </style>
 
 
@@ -85,11 +84,11 @@
     </nav>
 
 
-    <div id="test1" class="col s12" >
+    <div id="test1" class="col s12">
         <div>
             <div class="row">
                 <div class="col l4 s12">
-                    <ul class="collapsible popout" data-collapsible="expandable">                 
+                    <ul class="collapsible popout" data-collapsible="expandable">
                         <li>
                             <div class="collapsible-header active"><i class="material-icons">email</i>Alerts</div>
                             <div class="collapsible-body">
@@ -136,7 +135,7 @@
                     <ul class="collapsible popout" data-collapsible="expandable">
                         <li>
                             <div class="collapsible-header active"><i class="material-icons">map</i>Device Map</div>
-                            <div class="collapsible-body" >
+                            <div class="collapsible-body">
                                 <span>
                                     <div id="map"></div>
                                 </span>
@@ -150,24 +149,31 @@
 
 
     <div id="test2" class="col s12">
+
+    </div>
+
+
+    <div id="test3" class="col s12">
         <div>
-            <div class="ro">
+            <div class="row">
                 <div class="col l12 s12">
                     <ul class="collapsible popout" data-collapsible="expandable">
                         <li>
                             <div class="collapsible-header active"><i class="material-icons">settings</i>Data Configurations</div>
                             <div class="collapsible-body">
-                                <div class="col l3">
-                                    <h4>Date Range</h4>
-                                </div>
-                                <div class="col l3">
-                                    <h4>Device Plot Options</h4>
-                                </div>
-                                <div class="col l3">
-                                    <h4>Chart Type</h4>
-                                </div>
-                                <div class="col l3">
-                                    <h4>Time Intervals</h4>
+                                <div class="row">
+                                    <div class="col l3">
+                                        <p>Date Range</p>
+                                    </div>
+                                    <div class="col l3">
+                                        <p>Device Plot Options</p>
+                                    </div>
+                                    <div class="col l3">
+                                        <p>Chart Type</p>
+                                    </div>
+                                    <div class="col l3">
+                                        <p>Time Intervals<p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
@@ -179,19 +185,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="test3" class="col s12">Test 3</div>
     <div id="test4" class="col s12">Test 4</div>
 
     <!--Import jQuery before materialize.js-->
@@ -221,7 +214,6 @@
 
             }); // end of document ready
         })(jQuery);
-
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5VorCjhehIpMfi5rcTuelxgIz3E6QKDE&callback=initMap"></script>
 </body>
