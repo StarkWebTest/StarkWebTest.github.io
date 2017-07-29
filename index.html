@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import Materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection" />
 
     <title>Eye-Oh-Tee</title>
     <!--Let browser know website is optimized for mobile-->
@@ -19,11 +18,33 @@
     }
 
     .nav-extended {
-        background-color: #cc5500;
+        background-color: #212121;
+        
+    }
+
+    nav .brand-logo {
+        color: #00BCD4;
+        padding: 5px;
+    }
+
+    .tabs.tabs-transparent .tab a:hover, .tabs.tabs-transparent .tab a.active {
+        color: #00BCD4;
+    }
+
+    .tabs.tabs-transparent .tab a {
+        color: #00BCD4;
+    }
+
+    .tabs.tabs-transparent .indicator {
+        background-color: #00BCD4;
+    }
+
+    nav ul a {
+        color: #00BCD4;
     }
 
     .card {
-        background-color: #cc5500;
+        background-color: white;
         text-align: center;
         color: white;
     }
@@ -31,15 +52,19 @@
     #test1 {
         margin-top: 20px;
     }
-
     #page {
-        background: url(https://github.com/StarkWebTest/StarkWebTest.github.io/blob/master/images/wallup-24143.png?raw=true) 50% fixed;
+        background-color: #616161;
     }
 
     #map {
         height: 400px;
         overflow: visible;
         width: 100%;
+    }
+
+    .collapsible-body {
+        background-color: #212121;
+        border-color: #212121;
     }
 
     #alerts {
@@ -63,11 +88,14 @@
     #dataConfig {
         text-align: center;
         padding: 10px;
+        background-color: white;
+        font-size: 20px;
+        font-weight: bold;
     }
 
     .collapsible-header {
-        background-color: #cc5500;
-        color: white;
+        background-color: #212121;
+        color: #00BCD4;
         align-content: center;
         border-color: transparent;
         font-size: 17px;
@@ -79,7 +107,7 @@
     }
 
     .picker__date-display {
-        background-color: #cc5500;
+        background-color: #00BCD4;
         border-color: transparent;
     }
 
@@ -92,17 +120,30 @@
     }
 
     #dateRangeBtn {
-        background-color: #cc5500;
-        color: white;
+        background-color: #00BCD4;
+        color: #212121;
     }
 
     .dropdown-content li>a {
-        color: #cc5500;
+        color: #00BCD4;
+        background-color: #212121;
+    }
+
+    .dropdown-content li>a:hover {
+        background-color: #00BCD4;
+        color: #212121;
+    }
+
+    .table {
+        background-color: white;
     }
 </style>
 
 
 <body id="page">
+
+
+
     <ul id="dropdown2" class="dropdown-content">
         <li><a href="#!">one</a></li>
         <li><a href="#!">two</a></li>
@@ -140,6 +181,13 @@
             </ul>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="image">
+
+        </div>
+    </div>
+
 
 
     <div id="test1" class="col s12">
