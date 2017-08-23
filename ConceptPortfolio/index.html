@@ -17,18 +17,150 @@
 
 
 <style>
+    @font-face {
+        font-family: "RobotoThin";
+        src: url("fonts/roboto/Roboto-Thin.woff") format('woff');
+    }
+
+    body {
+        font-family: RobotoThin;
+    }
+
     .Landing {
-        background: url(https://github.com/Tier-Zero/Tier-Zero.github.io/blob/master/images/Tampa_2.png?raw=true) 50% fixed;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: #2F5597;
+        height: calc(100% + 60px);
+        /* height: 700px; */
+        margin: 0px;
         padding: 0px;
+    }
+
+    .row .col {
+        padding: 0px;
+    }
+
+
+    .MainInfo {
+        text-align: center;
+        color: white;
+        margin: 0px;
+    }
+
+    .Websites {
+        text-align: center;
+        margin: 10px;
+        color: white;
+    }
+
+    .Software {
+        text-align: center;
+        margin: 10px;
+        color: white;
+    }
+
+    #softwareSection {
+        background-color: transparent;
+    }
+
+    .LangFrame {
+        text-align: center;
+        margin: 10px;
+        color: white;
+    }
+
+    hr {
+        margin: 0px;
+    }
+
+    .row {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .nav-wrapper {
+        margin: 0px;
+    }
+
+    nav {
+        margin: 0px;
     }
 </style>
 
 <body>
 
-    <section id="Landing" class="module-image js-height-full" style="height: 895px; background-position: 50% 0px;">
+    <section class="Landing">
+        <div class="row">
+            <div class="col l12">
+                <section class="MainInfo">
+                    <h1>Cameron Michael Stark</h1>
+                    <h3>Bachelor Of Science In Software Engineering</h3>
+                    <h3>Embry-Riddle Aerounautical University</h3>
+                </section>
+
+                <section class="Websites">
+                    <div class="container">
+                        <h4>Websites</h4>
+                        <div class="row">
+                            <div class="col l6 m6 s6">
+                                <h5>Visual Studio 2015/2017</h5>
+                                <h5>Visual Studio Code</h5>
+                                <h5>Blender</h5>
+                                <h5>SQL Server Management Studio</h5>
+                            </div>
+                            <div class="col l6 m6 s6">
+                                <h5>MatLab</h5>
+                                <h5>Catia</h5>
+                                <h5>Eclipse</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="Software">
+                    <div class="container" id="softwareSection">
+                        <h4>Software</h4>
+                        <div class="row">
+                            <div class="col l6 m6 s6">
+                                <h5>Visual Studio 2015/2017</h5>
+                                <h5>Visual Studio Code</h5>
+                                <h5>Blender</h5>
+                                <h5>SQL Server Management Studio</h5>
+                            </div>
+                            <div class="col l6 m6 s6">
+                                <h5>MatLab</h5>
+                                <h5>Catia</h5>
+                                <h5>Eclipse</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="LangFrame">
+                    <div class="container" id="langFrameSection">
+                        <h4>Languages/Frameworks</h4>
+                        <div class="row">
+                            <div class="col l6 m6 s6">
+                                <h5>HTML</h5>
+                                <h5>JavaScript</h5>
+                                <h5>C#</h5>
+                                <h5>SQL</h5>
+                                <h5>Bootstrap</h5>
+                                <h5>Xamarin.Forms</h5>
+                            </div>
+                            <div class="col l6 m6 s6">
+                                <h5>CSS</h5>
+                                <h5>AngularJS</h5>
+                                <h5>XAML</h5>
+                                <h5>LINQ</h5>
+                                <h5>Materialize</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+        </div>
 
     </section>
 
@@ -65,7 +197,13 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-
+    <script>
+        var options = [
+            { selector: '.Software', offset: 0, callback: 'Materialize.fadeInImage(".Software")' },
+            { selector: '.LangFrame', offset: 100, callback: 'Materialize.fadeInImage(".LangFrame")' },
+        ];
+        Materialize.scrollFire(options);
+    </script>
 
 </body>
 
