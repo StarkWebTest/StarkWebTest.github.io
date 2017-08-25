@@ -112,6 +112,10 @@
         opacity: 0;
     }
 
+    .experienceList li {
+        opacity: 0;
+    }
+
     .pin-top {
         position: relative;
     }
@@ -119,9 +123,14 @@
     .pinned {
         z-index: 1000;
     }
+
+    .company,
+    .position {
+        display: inline;
+    }
 </style>
 
-<body>
+<body ng-app="Portfolio">
 
     <section class="Landing">
         <div class="row">
@@ -230,12 +239,14 @@
     </div>
 
 
-    <section class="home" style="height: 2000px;">
+
+
+    <section class="home">
         <ul class="homeList">
             <li>
-                <div class="card z-depth-3">
-                    <div class="card-content">
-                        <h5>Test Text</h5>
+                <div class="card z-depth-3" style="background-color: #2F5597;">
+                    <div class="card-content" style=" padding: 5px; color: white;">
+                        <h4>Home</h4>
                     </div>
                 </div>
             </li>
@@ -243,7 +254,66 @@
             <li>
                 <div class="card z-depth-3">
                     <div class="card-content">
-                        <h5>Test Text</h5>
+                        <h4>Front-End Developer</h4>
+                        <hr>
+                        <h5>Web (HTML Based)</h5>
+                        <h5>WPF (Windows Presentation Foundation)</h5>
+                        <h5>Xamarin.Forms (Cross Platform Mobile Apps)</h5>
+                        <h5>UWP (Universal Windows Platform)</h5>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="card z-depth-3">
+                    <div class="card-content">
+                        <h4>Back-End Developer</h4>
+                        <hr>
+                        <h5>Web: Javascript and JSON </h5>
+                        <h5>Applications: SQL Queries and Processing</h5>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="card z-depth-3">
+                    <div class="card-content">
+                        <h4>Positions</h4>
+                        <hr>
+                        <h5>TechEagles: Community Outreach Officer</h5>
+                        <h5>Boy Scouts of America: Scout Master</h5>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="card z-depth-3">
+                    <div class="card-content">
+                        <h4>Certifications</h4>
+                        <hr>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="experience">
+        <ul class="experienceList" ng-controller="MainController">
+            <li>
+                <div class="card z-depth-3" style="background-color: #2F5597;">
+                    <div class="card-content" style=" padding: 5px; color: white;">
+                        <h4>Experience</h4>
+                    </div>
+                </div>
+            </li>
+            <li ng-repeat="exp in experience">
+                <div class="card z-depth-4">
+                    <div class="card-content">
+                        <h3 class="company"><b> {{ exp.company }} </b></h3>
+                        <h4 class="position"> {{ exp.position }} </h4>
+                        <hr>
+                        <h5 class="info"> {{ exp.info1 }} </h5>
+                        <h5 class="info"> {{ exp.info2 }} </h5>
                     </div>
                 </div>
             </li>
@@ -263,7 +333,8 @@
             { selector: '.Websites', offset: 750, callback: 'Materialize.fadeInImage(".Websites")' },
             { selector: '.Software', offset: 700, callback: 'Materialize.fadeInImage(".Software")' },
             { selector: '.LangFrame', offset: 650, callback: 'Materialize.fadeInImage(".LangFrame")' },
-            { selector: '.homeList', offset: 500, callback: 'Materialize.showStaggeredList(".homeList")' },
+            { selector: '.homeList', offset: 650, callback: 'Materialize.showStaggeredList(".homeList")' },
+            { selector: '.experienceList', offset: 650, callback: 'Materialize.showStaggeredList(".experienceList")' },
         ];
         Materialize.scrollFire(options);
 
@@ -281,7 +352,7 @@
                 var $target = $('#' + $(this).attr('data-target'));
                 $this.pushpin({
                     top: $target.offset().top,
-                    
+
                 });
             });
         }
