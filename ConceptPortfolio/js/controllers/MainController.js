@@ -18,7 +18,7 @@ app.controller('MainController', ['$scope', function($scope) {
             company: 'Fusion Advertising Inc.',
             img: 'images/Fusion_Logo.png',
             position: 'Lead Mobile Developer Intern',
-            info1: 'Developed The Frugal You coupon application',
+            info1: 'Worked on The Frugal You coupon application',
             info2: 'C#, XAML, Xamarin.Forms, .NET'
         },
         {

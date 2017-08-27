@@ -132,6 +132,17 @@
     .position {
         display: inline;
     }
+
+    .side-nav {
+        background-color: #2F5597;
+        text-align: center
+    }
+
+    .side-nav li a {
+        color: white;
+        font-size: 25px;
+        
+    }
 </style>
 
 <body ng-app="Portfolio">
@@ -227,25 +238,27 @@
                 <a href="#!" class="brand-logo center"><img src="images/CMS_Logo1.png" style="height: 70px;"/></a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="left hide-on-med-and-down">
-                    <li><a href="" class="waves-effect">Home</a></li>
-                    <li><a href="" class="waves-effect">Experience</a></li>
-                    <li><a href="" class="waves-effect"> Projects</a></li>
+                    <li><a href="#home" class="waves-effect">Home</a></li>
+                    <li><a href="#experience" class="waves-effect">Experience</a></li>
+                    <li><a href="#projects" class="waves-effect"> Projects</a></li>
                     <li><a href="resume.html" target="_blank" class="waves-effect">Resume</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="" class="waves-effect">Home</a></li>
-                    <li><a href="" class="waves-effect">Experience</a></li>
-                    <li><a href="" class="waves-effect"> Projects</a></li>
-                    <li><a href="" class="waves-effect">Resume</a></li>
+                    <li><a href="#home" class="waves-effect">Home</a></li>
+                    <li><a href="#experience" class="waves-effect">Experience</a></li>
+                    <li><a href="#projects" class="waves-effect"> Projects</a></li>
+                    <li><a href="resume.html" target="_blank" class="waves-effect">Resume</a></li>
                 </ul>
             </div>
         </nav>
     </div>
 
 
+    <section id="home" style="height: 50px;" class="section scrollspy">
 
+    </section>
 
-    <section class="home">
+    <section class="home" >
         <ul class="homeList">
             <li>
                 <div class="card z-depth-3" style="background-color: #2F5597;">
@@ -301,7 +314,11 @@
         </ul>
     </section>
 
-    <section class="experience">
+    <section id="experience" style="height: 50px;" class="section scrollspy">
+        
+    </section>
+
+    <section class="experience" >
         <ul class="experienceList" ng-controller="MainController">
             <li>
                 <div class="card z-depth-3" style="background-color: #2F5597;">
@@ -324,7 +341,12 @@
         </ul>
     </section>
 
-    <section class="Projects"> 
+    <section id="projects" style="height: 50px;" class="section scrollspy">
+        
+    </section>
+
+
+    <section class="Projects" >
         <ul class="projectList" ng-controller="MainController">
             <li>
                 <div class="card z-depth-3" style="background-color: #2F5597;">
@@ -384,6 +406,10 @@
                 });
             });
         }
+
+        $(document).ready(function () {
+            $('.scrollspy').scrollSpy();
+        });
     </script>
 
 </body>
