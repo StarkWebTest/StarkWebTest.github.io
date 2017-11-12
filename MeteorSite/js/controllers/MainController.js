@@ -33,8 +33,8 @@ app.controller('MainController', ['$scope', function($scope) {
             name: 'Mt. Olympus Node 10',
             lat: '47.4950',
             lon: '13.6020',
-            status: 'Working',
-            weight: '5 of 10lbs'
+            status: 'Full',
+            weight: '10 of 10lbs'
         },
             {
             name: 'North Cascades Node 11',
