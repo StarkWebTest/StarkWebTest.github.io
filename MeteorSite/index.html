@@ -83,10 +83,10 @@
                 <div id="Nodes">
                     <ul class="collapsible popout" data-collapsible="expandable">
                         <li ng-repeat="mod in modules">
-                            <div class="collapsible-header active" ng-class="{'color-green': mod.status === 'Working', 'color-red': mod.status === 'Not Working', 'color-yellow': mod.status === 'Full'}">
+                            <div class="collapsible-header" ng-class="{'color-green': mod.status === 'Working', 'color-red': mod.status === 'Not Working', 'color-yellow': mod.status === 'Full'}">
                                 <h5> {{ mod.name }} </h5>
                             </div>
-                            <div class="collapsible-body" id="alerts">
+                            <div class="collapsible-body" id="alerts" style="display: none;">
                                 <table class="table">
                                     <thead>
                                         <tr valign="middle" halign="middle">
@@ -101,7 +101,7 @@
                                     <tbody>
                                         <tr>
                                             <th>&nbsp;</th>
-                                            <th> {{ mod.location }} </th>
+                                            <th> {{ mod.lat }}, {{ mod.lon }} </th>
                                             <th> {{ mod.status }} </th>
                                             <th> {{ mod.weight }} </th>
                                             <th>&nbsp;</th>
@@ -114,8 +114,8 @@
                 </div>
             </div>
             <div class="col l8 m12 s12">
-                <div style="position: fixed;">
-                    <div id="map" class="z-depth-4"></div>
+                <div >
+                    <div id="map" class="z-depth-4" style="position: absolute;"></div>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script>
+    <script async defer>
         (function ($) {
             $(function () {
 
