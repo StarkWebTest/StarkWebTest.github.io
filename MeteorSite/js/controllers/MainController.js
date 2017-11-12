@@ -3,7 +3,8 @@ app.controller('MainController', ['$scope', function($scope) {
     $scope.modules = [
         {
             name: 'Mt. Rainier Node 1',
-            location: '46.8523° N, 121.7603° W',
+            lat: '46.8523',
+            lon: '-121.7603',
             status: 'Working',
             weight: '5 of 10lbs'
         },
@@ -25,6 +26,25 @@ app.controller('MainController', ['$scope', function($scope) {
             status: 'Full',
             weight: '10 of 10lbs'
         },
+        {
+            name: 'Mt. Rainier Node 4',
+            location: '46.8523° N, 121.7603° W',
+            status: 'Full',
+            weight: '10 of 10lbs'
+        },
+        {
+            name: 'Mt. Rainier Node 4',
+            location: '46.8523° N, 121.7603° W',
+            status: 'Full',
+            weight: '10 of 10lbs'
+        },
+        {
+            name: 'Mt. Rainier Node 4',
+            location: '46.8523° N, 121.7603° W',
+            status: 'Full',
+            weight: '10 of 10lbs'
+        },
+
         
 
     ];
