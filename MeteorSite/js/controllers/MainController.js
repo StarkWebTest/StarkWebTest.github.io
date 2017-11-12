@@ -19,7 +19,7 @@ app.controller('MainController', ['$scope', function($scope) {
             name: 'Mt. Olympus Node 8',
             lat: '47.8330',
             lon: '-123.3170',
-            status: 'Working',
+            status: 'Not Working',
             weight: '5 of 10lbs'
         },
             {
