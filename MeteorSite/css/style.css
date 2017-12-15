@@ -1,6 +1,6 @@
 @font-face {
     font-family: "RobotoThin";
-    src: url("/fonts/Roboto-Thin.woff") format('woff');
+    src: url("fonts/Roboto-Thin.woff") format('woff');
 }
 
 body {
@@ -270,6 +270,6 @@ a.article, a.article:hover {
     #sidebarCollapse span {
         display: block;
         text-align: center;
-    
+        
     }
 }
