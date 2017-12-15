@@ -2,188 +2,124 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import Materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://use.fontawesome.com/248b427ce3.js"></script>
     <title>M.E.T.E.O.R Status Tracker</title>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.js"></script>
-    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<style>
-    @font-face {
-        font-family: "RobotoThin";
-        src: url("fonts/Roboto-Thin.woff") format('woff');
-    }
-
-    body {
-        font-family: RobotoThin;
-    }
-
-    #Nodes {
-        width: 100%;
-        height: 100%;
-    }
-
-    nav .nav-wrapper {
-        background-color: #1B5E20;
-    }
-
-    .collapsible-header {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .collapsible-popout {
-        border-color: transparent;
-    }
-
-    #map {
-        height: 700px;
-        width: 65%;
-        margin-right: 50px;
-        margin-top: 16px;
-    }
-
-    .table {
-        text-align: center;
-    }
-
-    .color-red {
-        background-color: red;
-        color: white;
-    }
-
-    .color-green {
-        background-color: green;
-        color: white;
-    }
-
-    .color-yellow {
-        background-color: yellow;
-    }
-</style>
 
 <body ng-app="METEOR">
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper z-depth-5">
-                <a href="#" class="brand-logo center">M.E.T.E.O.R</a>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>M.E.T.E.O.R.</h3>
+                <strong><span class="glyphicon glyphicon-globe" ></span></strong>
             </div>
-        </nav>
-    </div>
 
 
-    <div class="container-fluid" ng-controller="MainController">
-        <div class="row">
-            <div class="col l4 m12 s12">
-                <div id="Nodes">
-                    <ul class="collapsible popout" data-collapsible="expandable">
-                        <li ng-repeat="mod in modules">
-                            <div class="collapsible-header" ng-class="{'color-green': mod.status === 'Working', 'color-red': mod.status === 'Not Working', 'color-yellow': mod.status === 'Full'}">
-                                <h5> {{ mod.name }} </h5>
-                            </div>
-                            <div class="collapsible-body" id="alerts" style="display: none;">
-                                <table class="table">
-                                    <thead>
-                                        <tr valign="middle" halign="middle">
-                                            <th>&nbsp;</th>
-                                            <th>Location</th>
-                                            <th>Status</th>
-                                            <th>Weight</th>
-                                            <th>&nbsp;</th>
-                                        </tr>
-                                    </thead>
 
-                                    <tbody>
-                                        <tr>
-                                            <th>&nbsp;</th>
-                                            <th> {{ mod.lat }}, {{ mod.lon }} </th>
-                                            <th> {{ mod.status }} </th>
-                                            <th> {{ mod.weight }} </th>
-                                            <th>&nbsp;</th>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                        Mt. Rainier
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
                         </li>
                     </ul>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-default">
+                            <span>Expand</span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="col l8 m12 s12">
-                <div >
-                    <div id="map" class="z-depth-4" style="position: absolute;"></div>
-                </div>
-            </div>
+            </nav>
+
+
+
+
+
+            <!-- START Page Content -->
+
+            <!-- END Page Content -->
         </div>
     </div>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script async defer>
-        (function ($) {
-            $(function () {
 
-                $('.button-collapse').sideNav();
-            }); // end of document ready
-        })(jQuery);
 
-        function initMap() {
 
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 6,
-                center: { lat: 46.8523, lng: -121.7603 }
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
             });
 
-            // Create an array of alphabetical characters used to label the markers.
-            var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-                
-            var markers = locations.map(function (location, i) {
-                return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length]
-                });
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
-
-            // Add a marker clusterer to manage the markers.
-            var markerCluster = new MarkerClusterer(map, markers,
-                { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-        }
-        var locations = [
-            { lat: 47.7170, lng: -123.3330},
-            { lat: 47.8330, lng: -123.3170},
-            { lat: 47.8830, lng: -123.6330},
-            { lat: 47.4950, lng: 13.6020},
-            { lat: 47.7330, lng: -123.317},
-            { lat: 47.8500, lng: -123.3670},
-            { lat: 47.7670, lng: -123.6000},
-            { lat: 46.8480, lng: 8.5310},
-            { lat:  47.0680, lng: 12.4280},
-            { lat: 47.8170, lng: -123.6670},
-            { lat: 48.5500, lng: -120.9500},
-            { lat: 48.3170, lng: -120.9830},
-            { lat: 48.5000, lng: -121.0170},
-            { lat: 48.3670, lng: -121.0500},
-        ]
-
-
+        });
     </script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC46WBCzGiBFXyaKs4azeWbwnIxK0x130&callback=initMap">
-    </script>
-
 </body>
+
+
+
+
+
+
+
+
+
 
 <script src="js/app.js"></script>
 
 <script src="js/controllers/MainController.js"></script>
 
+
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
