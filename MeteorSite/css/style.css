@@ -232,12 +232,13 @@ a.article, a.article:hover {
         -ms-transform: translateX(50%);
         transform: translateX(50%);
     }
+
     #sidebar.active {
         margin-left: 0 !important;
     }
 
     #sidebar .sidebar-header h3, #sidebar .CTAs {
-        display: none;
+        display: block;
     }
 
     #sidebar .sidebar-header strong span{
@@ -267,6 +268,8 @@ a.article, a.article:hover {
         margin-left: 0;
     }
     #sidebarCollapse span {
-        display: none;
+        display: block;
+        text-align: center;
+    
     }
 }
