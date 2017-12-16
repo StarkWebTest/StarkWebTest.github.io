@@ -23,24 +23,30 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <h3>M.E.T.E.O.R.</h3>
-                <strong><span class="glyphicon glyphicon-globe" ></span></strong>
+                <strong>
+                    <span class="glyphicon glyphicon-globe"></span>
+                </strong>
             </div>
 
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                    <a href="#rainierSubmenu" data-toggle="collapse" aria-expanded="false">
                         Mt. Rainier
                     </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <ul class="collapse list-unstyled" id="rainierSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="#">Node 1</a>
                         </li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#olympusSubmenu" data-toggle="collapse" aria-expanded="false">
+                        Mt. Olympus
+                    </a>
+                    <ul class="collapse list-unstyled" id="olympusSubmenu">
                         <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
+                            <a href="#">Node 1</a>
                         </li>
                     </ul>
                 </li>
@@ -50,46 +56,49 @@
         </nav>
 
         <!-- Page Content Holder -->
-        <div>
-            <nav class="navbar navbar-default">
+        <div id="content">
+            <nav class="navbar navbar-default navbar-fixed">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a type="button" id="sidebarCollapse">
-                            <span class="glyphicon glyphicon-menu-hamburger" ></span>
+                            <span class="glyphicon glyphicon-menu-hamburger" style="color: black; font-size: 20px; "></span>
                         </a>
                     </div>
                 </div>
             </nav>
 
-
-
-
-
             <!-- START Page Content -->
-
+            <div class="container-fluid" id="info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="panel">
+                            <h3>Panel</h>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- END Page Content -->
         </div>
-    </div>
 
 
 
 
 
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap Js CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
             });
-        });
 
-    </script>
+        </script>
 </body>
 
 

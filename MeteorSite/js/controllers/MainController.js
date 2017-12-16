@@ -1,5 +1,5 @@
 app.controller('MainController', ['$scope', function($scope) {
-    
+
     $scope.modules = [
         {
             name: 'Mt. Rainier Node 1',
