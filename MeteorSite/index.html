@@ -75,7 +75,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="panel">
-                            <div id="map" style="position: absolute;"></div>
+                            <div id="map" ></div>
                         </div>
                     </div>
 
@@ -103,18 +103,18 @@
             });
 
             function initMap() {
+                var uluru = {lat: -25.363, lng: 131.044};
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 6,
-                    center: { lat: 46.8523, lng: -121.7603 }
+                  zoom: 4,
+                  center: uluru
                 });
-                // Create an array of alphabetical characters used to label the markers.
-                var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-            }
+                var marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map
+                });
+              }
         </script>
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC46WBCzGiBFXyaKs4azeWbwnIxK0x130&callback=initMap">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7P7_gulbom_UQNheFJ2Byd-gsUfF9_SQ&callback=initMap">
         </script>
 </body>
 
