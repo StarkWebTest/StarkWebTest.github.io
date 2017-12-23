@@ -1,4 +1,6 @@
 app.controller('MainController', ['$scope', function ($scope) {
+    $scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7P7_gulbom_UQNheFJ2Byd-gsUfF9_SQ";
+    
     $scope.modules = [
         {
             location: 'Mt. Rainier',

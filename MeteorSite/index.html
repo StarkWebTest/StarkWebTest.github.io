@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="/js/shared/ng-map.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
@@ -38,7 +39,7 @@
                     <ul class="collapse list-unstyled" id="{{ loc.code }}">
                         <li ng-repeat="node in loc.nodes">
                             <a href="#" ng-click="select(node)">{{ node.name }}</a>
-                        </li> 
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -75,7 +76,12 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="panel">
-                            <div id="map" ></div>
+                            <!-- <div id="map" ></div> -->
+                            <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}">
+                                <ng-map center="{{ selected.lat }},{{ selected.lon }}" zoom="7">
+                                    <marker position="{{ selected.lat }},{{ selected.lon }}"></marker>
+                                </ng-map>
+                            </div>
                         </div>
                     </div>
 
@@ -102,20 +108,21 @@
                 });
             });
 
-            function initMap() {
+            /* function initMap() {
                 var uluru = {lat: -25.363, lng: 131.044};
                 var map = new google.maps.Map(document.getElementById('map'), {
                   zoom: 4,
                   center: uluru
                 });
+
                 var marker = new google.maps.Marker({
                   position: uluru,
                   map: map
                 });
-              }
+              } */
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7P7_gulbom_UQNheFJ2Byd-gsUfF9_SQ&callback=initMap">
-        </script>
+        <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7P7_gulbom_UQNheFJ2Byd-gsUfF9_SQ&callback=initMap">
+        </script> -->
 </body>
 
 

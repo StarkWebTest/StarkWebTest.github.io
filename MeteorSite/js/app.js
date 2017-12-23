@@ -1,2 +1,2 @@
-var app = angular.module('METEOR',['ngRoute']);
+var app = angular.module('METEOR',['ngRoute','ngMap']);
 
