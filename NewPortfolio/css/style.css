@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "RobotoThin";
+    src: url("fonts/roboto/Roboto-Thin.woff") format('woff');
+}
+
+body {
+    font-family: RobotoThin;
+}
+
+.wrapper { 
+    display: flex;
+    align-items: stretch;
+}
+
+.sidebar {
+    background-color: #2F5597;
+    color: white;
+    width: 350px;
+    height: 100vh;
+    padding-top: 20px;
+    box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    display: block;
+    padding: 0px;
+}
+
+li {
+    font-size: 25px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+li:hover {
+    background-color: white;
+    color: #2F5597;
+    cursor: pointer;
+}
