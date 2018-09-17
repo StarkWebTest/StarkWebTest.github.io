@@ -1,0 +1,21 @@
+.american {
+    width: 100%;
+    height: 300px;
+    color: #233e6f;
+    padding: 25px;
+    text-align: center;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+}
+
+.project-image {
+    width: 50%;
+}
+
+.project-descr {
+    width: 50%;
+    text-align: center;
+}
