@@ -17,10 +17,12 @@ export class SidebarComponent {
 
     isSidebarActive = false;
     isContentActive = false;
+    isSidebarHeaderActive = false;
     isSidebarContentActive = false;
 
     toggleSidebar() {
         this.toggleService.toggle();
+        this.isSidebarHeaderActive = !this.isSidebarHeaderActive;
         this.isSidebarActive = !this.isSidebarActive;
         this.isSidebarContentActive = !this.isSidebarContentActive;
     }

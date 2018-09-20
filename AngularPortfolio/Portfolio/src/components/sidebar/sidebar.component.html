@@ -3,37 +3,37 @@
         <a (click)='toggleSidebar()'>
             <i id="collapseBtn" class="fas fa-bars"></i>
         </a>
-        <h1> {{ name }} </h1>
+        <h1 id="header" class='sidebar-section' [class.active]='isSidebarHeaderActive'> {{ name }} </h1>
     </div>
     <div class="sidebar-content" [class.active]='isSidebarContentActive' id = 'sidebar-content'>
         <br>
-        <section id="education">
-            <h3 style="margin: 0"><b>EDUCATION</b></h3>
+        <section id="education" class='sidebar-section'>
+            <h3 style="margin: 0" id="header-minor"><b>EDUCATION</b></h3>
             <br>
-            <h4 style="margin: 0 0 10px 0"><i>Bachelors of Science in <br> Software Engineering</i></h4>
-            <h4 style="margin: 0">Embry-Riddle <br> Aeronautical University</h4>        
+            <h4 style="margin: 0 0 10px 0" id="degree"><i>Bachelors of Science in <br> Software Engineering</i></h4>
+            <h4 style="margin: 0" id="school">Embry-Riddle <br> Aeronautical University</h4>        
         </section>
         <br>
-        <br>
-        <section id="websites">
-            <h3 style="margin: 0;">WEBSITES</h3>
-            <br>
-            <h4 style="margin: 0;"><a target="_blank" href="http://Goo.gl/riuiTK">LinkedIn</a></h4>
-            <br>
-            <h4 style="margin: 0;"><a target="_blank" href="http://Goo.gl/riuiTK">Github</a></h4>
+        <section id="websites" class='sidebar-section'>
+            <h3 style="margin: 0;" id="header-minor">WEBSITES</h3>
+            <h4 style="margin: 5px;"><a target="_blank" href="http://Goo.gl/riuiTK">LinkedIn</a></h4>
+            <h4 style="margin: 5px;"><a target="_blank" href="http://Goo.gl/riuiTK">Github</a></h4>
         </section>
         <br>
-        <br>
-        <section id='software'>
-            <h3 style="margin: 0;">SOFTWARE</h3>
-            <br>
-            <h4 style="margin: 0 0 10px 0;" *ngFor ="let name of softwares"> {{ name.software }} </h4>
+        <section id='software' class='sidebar-section'>
+            <h3 style="margin: 0;" id="header-minor">SOFTWARE</h3>
+            <div *ngFor ="let name of softwares">
+                <h4 style="margin: 5px 0 10px 0;" > {{ name.software }} </h4>
+            </div>
+            
         </section>
         <br>
-        <section id='language'>
-            <h3 style='margin: 0;'>LANGUAGES</h3>
-            <br>
-            <h4 style="margin: 0 0 10px 0;" *ngFor='let name of languages'> {{ name.language }} </h4>
+        <section id='language' class='sidebar-section'>
+            <h3 style='margin: 0;' id="header-minor">LANGUAGES</h3>
+
+            <div *ngFor='let name of languages'>
+                <h4 style="margin: 5px 0 10px 0;" > {{ name.language }} </h4>
+            </div >
         </section>
     </div>
 </div>

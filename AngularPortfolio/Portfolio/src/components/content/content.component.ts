@@ -12,7 +12,18 @@ export class ContentComponent {
 
     @HostBinding('class.is-open')
     isContentActive = false;
+    title = "Work Experience";
 
+    //American Airlines
+    AAurl = "../../assets/images/American-Airlines-logo-2013.png";
+    AAPosition = "Reliability Software Engineering Co-Op";
+    AAProjects = [
+        {
+            title: 'Cabin Data Access',
+            image: '../../assets/images/CDAPicture.png',
+            caption: ''
+        }
+    ];
 
     constructor(
         private toggleService : ToggleService
