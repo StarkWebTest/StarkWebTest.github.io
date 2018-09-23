@@ -5,12 +5,17 @@
         <p class='company-position'>{{ AAPosition }}</p>
         <div class="project-section" *ngFor='let name of AAProjects'>
             <p class="project-title">{{ name.title }}</p>
-            <div class="project-image">
-                <img style="height: 250px; 
-                border-radius: 30px; 
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);" 
-                src="{{ name.image }}">
+            <div class="project-details">
+                <div class="project-image">
+                    <img style="height: 250px; 
+                            border-radius: 30px; 
+                            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);"
+                        src="{{ name.image }}">
+                </div>
+
+                <div class=""
             </div>
+
         </div>
 
     </div>

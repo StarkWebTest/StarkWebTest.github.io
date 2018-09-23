@@ -1,0 +1,129 @@
+.content {
+    height: 100vh;
+    width: calc(100% - 250px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 1s;
+}
+
+#content.active {
+    width: 100%;
+    transition: all 1s;
+}
+
+.top-bar {
+    height: 65px;
+    background-color: #FFF;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+    width: 100%;
+}
+
+#collapse-btn {
+    cursor: pointer;
+    margin: 15px 20px;
+    font-size: 30px;
+    color: #000;
+}
+
+#modern-view-btn, #table-view-btn {
+    cursor: pointer;
+    margin: 15px 15px;
+    font-size: 30px;
+}
+
+#modern-view-btn.active, #table-view-btn.active {
+    color: #00ACC1 !important;
+}
+
+.content-main {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 1;
+    right: 1;
+}
+
+.modern-view {
+    width: 100%;
+    padding: 10px;
+    /* opacity: 0; */
+    display: none;
+    transition: all 1s;
+}
+
+.modern-view.active {
+    /* opacity: 1; */
+    display: block;
+    height: 100%; 
+    transition: all 1s;
+}
+
+.formatted-list {
+    background-color: #FFF;
+    width: 30%;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #00ACC1 !important;
+}
+
+.logbook-item {
+    padding: 0px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.logbook-item-header {
+    background-color: #00ACC1 !important;
+    text-align: center;
+    padding: 10px;
+    color: #FFF;
+}
+
+.logbook-item-content {
+    padding: 10px;
+}
+
+.table-view {
+    width: 100%;
+    padding: 10px;
+    display: none;
+    transition: all 1s;
+}
+
+.table-view.active {
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+}
+
+.formatted-table {
+    width: 95%;
+    display: flex;
+    max-height: 93%;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.date {
+    padding: 10px;
+    background-color: #00ACC1;
+    color: #FFF;
+    text-align: center;
+}
+
+.flights {
+    display: flex;
+    padding: 10px;
+    width: 300px;
+}

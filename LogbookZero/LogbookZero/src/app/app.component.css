@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+@font-face {
+    font-family: "RobotoThin";
+    src: url("../fonts/roboto/Roboto-Thin.woff") format('woff');
+}
+body {
+    font-family: RobotoThin;
+}
