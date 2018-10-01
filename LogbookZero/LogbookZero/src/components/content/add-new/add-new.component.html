@@ -1,9 +1,9 @@
 <div class="add-new">
     <div class="container-fluid">
-        <h2><b>Add New Item To Your Logbook</b></h2>
-        <hr>
+        <!-- <h2><b>Add New Item To Your Logbook</b></h2>
+        <hr> -->
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="form-group">
                     <label for="date">Date</label>
                     <input type="date" class="form-control" id="date" placeholder="">
@@ -22,16 +22,9 @@
                     <label for="arvTime">Time</label>
                     <input type="time" class="form-control" id="arvtime" placeholder="hh:mm:ss">
                 </div>
-                <div class="form-group">
-                    <h3>Aircraft</h3>
-                    <label for="aircraftType">Type</label>
-                    <input type="text" class="form-control" id="aircraftType" placeholder="XXXXXX">
-                    <label for="aircraftReg">Registration</label>
-                    <input type="text" class="form-control" id="aircraftReg" placeholder="XXXXXX">
-                </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="form-group">
                     <h3>Single Pilot Time</h3>
                     <label for="SEtime">SE</label>
@@ -54,13 +47,10 @@
                     <label for="ifrTime">IFR</label>
                     <input type="time" class="form-control" id="ifrTime">
                 </div>
-                <div class="form-group">
-                    <label for="remarks">Remarks & Endorsements</label>
-                    <input type="text" class="form-control" id="remarks">
-                </div>
+
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="form-group">
                     <h3>Pilot Function Time</h3>
                     <label for="picTime">PIC</label>
@@ -76,6 +66,17 @@
                     <input type="time" class="form-control" id="instrTime">
                 </div>
                 <div class="form-group">
+                    <h3>FSTD Session</h3>
+                    <label for="sessionType">Type</label>
+                    <input type='text' class="form-control" id="sessionType" placeholder="XXXXXXXXX">
+                    
+                    <label for="sessionTime">Total Time</label>
+                    <input type="time" class="form-control" id="sessionTime" placeholder="XXXXXXXXXX">
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="form-group">
                     <label for="picName">PIC Name</label>
                     <input type="text" class="form-control" id="picName" placeholder="XXXXXXX">
                 </div>
@@ -88,15 +89,24 @@
                     <input type="number" class="form-control" id="nightLand">
                 </div>
                 <div class="form-group">
-                    <h3>FSTD Session</h3>
-                    <label for="sessionType">Type</label>
-                    <input type='text' class="form-control" id="sessionType" placeholder="XXXXXXXXX">
-                    
-                    <label for="sessionTime">Total Time</label>
-                    <input type="time" class="form-control" id="sessionTime" placeholder="XXXXXXXXXX">
+                    <h3>Aircraft</h3>
+                    <label for="aircraftType">Type</label>
+                    <input type="text" class="form-control" id="aircraftType" placeholder="XXXXXX">
+                    <label for="aircraftReg">Registration</label>
+                    <input type="text" class="form-control" id="aircraftReg" placeholder="XXXXXX">
+                </div>
+                <div class="form-group">
+                    <label for="remarks">Remarks & Endorsements</label>
+                    <input type="text" class="form-control" id="remarks">
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="btn">Add new item</button>
+            </div>
+        </div>
+        
     </div>
 
 </div>
