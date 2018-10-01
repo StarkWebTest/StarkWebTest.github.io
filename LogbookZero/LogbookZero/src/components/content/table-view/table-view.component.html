@@ -1,0 +1,25 @@
+<div class="table-view" id="table-view" [class.active]='isTableViewActive'>
+    <div class="formatted-table" *ngFor="let item of logbook">
+        <div class="date">
+            {{ item.Date }}
+        </div>
+        <table style="width: 100%;">
+            <tr>
+                <th>Aircraft Type</th>
+                <th>Aircraft Ident</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Remarks And Endorsements</th>
+                <th>Student</th>
+            </tr>
+            <tr style="text-align: center;" *ngFor="let flight of item.Flights.Flight">
+                <td>{{ flight.AircraftType }}</td>
+                <td>{{ flight.AircraftIdent }}</td>
+                <td>{{ flight.From }}</td>
+                <td>{{ flight.To }}</td>
+                <td>{{ flight.Reason }}</td>
+                <td>{{ flight.Student }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

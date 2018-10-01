@@ -1,7 +1,7 @@
 import { Injectable, Output, EventEmitter, Inject } from '@angular/core';
 
 @Injectable()
-export class ToggleService {
+export class SidebarToggleService {
     isSidebarActive = false;
 
     @Output() change: EventEmitter<boolean> = new EventEmitter();

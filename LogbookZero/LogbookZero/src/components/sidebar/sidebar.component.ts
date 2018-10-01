@@ -1,6 +1,6 @@
 import { Component, HostBinding, Host } from '@angular/core';
 
-import { ToggleService } from '../../services/toggleService.service';
+import { SidebarToggleService } from '../../services/sidebarToggleService.service';
 
 @Component({
     selector: 'sidebar',
@@ -13,11 +13,11 @@ export class SidebarComponent {
     isSidebarActive = false;
 
     constructor(
-        private toggleService: ToggleService
+        private sidebarToggleService: SidebarToggleService
     ){}
     
     ngOnInit() {
-        this.toggleService.change.subscribe(isSidebarActive => {
+        this.sidebarToggleService.change.subscribe(isSidebarActive => {
             this.isSidebarActive = isSidebarActive
         })
     }

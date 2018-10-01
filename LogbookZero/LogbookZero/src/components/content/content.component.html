@@ -5,54 +5,14 @@
         <i (click)='modernView()' id="modern-view-btn" [class.active]='isModernViewActive' class="fas fa-columns"></i>
 
         <i (click)='tableView()' id="table-view-btn" [class.active]='isTableViewActive' class="fas fa-table"></i>
+    
+        <i (click)='addNewView()' id="add-new-btn" [class.active]='isAddNewViewActive' class="fas fa-plus"></i>
     </div>
 
     <div class="content-main">
-        <div class="modern-view" id="modern-view" [class.active]="isModernViewActive">
-            <div class="formatted-list">
-                <div class="logbook-item" *ngFor="let item of logbook">
-                    <div class="logbook-item-header">
-                        <b>Flight Date: {{ item.Date }}</b>
-                    </div>
-                    <div class="logbook-item-content" *ngFor="let flight of item.Flights.Flight">
-                        <p><b>Student:</b> {{ flight.Student }}</p>
-                        <p><b>Remarks And Endorsements:</b> {{ flight.Reason }} </p>
-                        <p><b>Aircraft: </b>{{ flight.AircraftType }} - {{ flight.AircraftIdent }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="table-view" id="table-view" [class.active]='isTableViewActive'>
-            <div class="formatted-table" *ngFor="let item of logbook">
-                <div class="date">
-                    {{ item.Date }}
-                </div>
-                <!-- <div class="flights" *ngFor="let flight of item.Flights.Flight">
-                    <p><b>Student:</b> {{ flight.Student }}</p>
-                    <p><b>Remarks And Endorsements:</b> {{ flight.Reason }} </p>
-                    <p><b>Aircraft: </b>{{ flight.AircraftType }} - {{ flight.AircraftIdent }}</p>
-                </div> -->
-                <table style="width: 100%;">
-                    <tr>
-                        <th>Aircraft Type</th>
-                        <th>Aircraft Ident</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Remarks And Endorsements</th>
-                        <th>Student</th>
-                    </tr>
-                    <tr style="text-align: center;" *ngFor="let flight of item.Flights.Flight">
-                        <td>{{ flight.AircraftType }}</td>
-                        <td>{{ flight.AircraftIdent }}</td>
-                        <td>{{ flight.From }}</td>
-                        <td>{{ flight.To }}</td>
-                        <td>{{ flight.Reason }}</td>
-                        <td>{{ flight.Student }}</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+        <modern-view *ngIf="view == 'modern'"></modern-view>
+        <table-view *ngIf="view == 'table'"></table-view>
+        <add-new *ngIf="view == 'addNew'"></add-new>
     </div>
 
 </div>

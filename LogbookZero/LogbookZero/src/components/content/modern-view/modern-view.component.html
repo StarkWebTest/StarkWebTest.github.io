@@ -1,0 +1,26 @@
+<div class="modern-view" id="modern-view" [class.active]="isModernViewActive">
+    <div class="container-fluid" id="modern-view-content">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="formatted-list">
+                    <div class="logbook-item" *ngFor="let item of logbook">
+                        <div class="logbook-item-header">
+                            <b>Flight Date: {{ item.Date }}</b>
+                        </div>
+                        <div class="logbook-item-content" *ngFor="let flight of item.Flights.Flight">
+                            <p><b>Student:</b> {{ flight.Student }}</p>
+                            <p><b>Remarks And Endorsements:</b> {{ flight.Reason }} </p>
+                            <p><b>Aircraft: </b>{{ flight.AircraftType }} - {{ flight.AircraftIdent }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="data-section">
+                    <div id="flights-aircraft"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
