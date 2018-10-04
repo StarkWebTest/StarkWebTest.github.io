@@ -1,19 +1,46 @@
 .content {
-    width: calc(100% - 320px);
-    margin-top: -20px;
+    width: 100%;
+    margin: 0px;
     padding: 0px;
-    z-index: -1;
+    height: 100vh;
+    overflow-y: scroll;
+/*     z-index: -1;
     position: absolute;
     top: 0;
+    right: 0; */
     text-align: center;
-    right: 0;
     transition: all 1s;
 }
 
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.experience {
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 0;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 10px;  /* rem[ove scrollbar space */
+    border-radius: 10px;
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    /* background-color: #00ACC1 !important; */
+    border-radius: 10px;
+    background-color: #0091EA;
+}
+
 .title-text {
-    margin: 40px 40px;
+    margin: 40px 40px 0px 40px;
     border-radius: 30px;
     padding: 5px;
+    z-index: 9999;
     background-color: #0091EA;
     font-size: 40px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
@@ -21,14 +48,11 @@
     color: #FFF;
 }
 
-#content.active {
-    width: calc(100% - 55px);
-    transition: all 1s;
-}
-
 .company-section {
+    z-index: 0;
+    background-color: #FFF;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
-    margin: 10px 60px;
+    margin: 20px 60px;
     padding: 10px;
     border-radius: 30px;
 }
@@ -38,11 +62,11 @@
 }
 
 .project-title {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .project-section {
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+    /* box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12); */
     padding: 20px;
     border-radius: 30px;
     margin: 10px;
@@ -50,5 +74,11 @@
 
 .project-details {
     display: flex;
+}
+
+.project-desc {
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
 }
 
