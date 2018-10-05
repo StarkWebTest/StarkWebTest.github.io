@@ -17,8 +17,8 @@ export class ModernViewComponent implements OnInit {
 
     logbook = this.dataService.getAllData();
 
+    
     aircraft = this.dataService.getAllAircraft();
-
     data = [
         {
             x: this.dataService.aircraftName,
@@ -31,10 +31,8 @@ export class ModernViewComponent implements OnInit {
         showLegend: false
     };
     
-
     ngOnInit() {
         Plotly.newPlot("flights-aircraft", this.data, this.layout, {staticPlot: true});
     }
 
-    
 }

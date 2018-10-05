@@ -2,7 +2,22 @@ import { Injectable, Output, EventEmitter, Inject } from '@angular/core';
 
 @Injectable()
 export class DataService {
-    logbook = [
+    logbookFormat = [
+        {
+            Date: '',
+            Flights: {
+                Flight: [
+                    {
+                        depAirport: '',
+                        depTime: ''
+                    }
+                ]
+            }
+        }
+    ]
+
+
+    oldLogbook = [
         {
             Pilot: 'Joey Lounsbury',
             Date: '6/3/2018',
@@ -118,19 +133,21 @@ export class DataService {
         }
     ]
 
+    logbook = [];
     aircraftName = [];
     aircraftCount = []
     getAllData() {
-        return(this.logbook);
+        return (this.logbook);
     }
 
-    getAllAircraft() {     
-        for(var i = 0; i < this.logbook.length; i++) {
+    getAllAircraft() {
+
+        for (var i = 0; i < this.logbook.length; i++) {
             var obj = this.logbook[i];
-            for(var j = 0; j < obj.Flights.Flight.length; j++) {
+            for (var j = 0; j < obj.Flights.Flight.length; j++) {
                 var obj2 = obj.Flights.Flight[j];
 
-                if(this.aircraftName.indexOf(obj2.AircraftType) == -1) {
+                if (this.aircraftName.indexOf(obj2.AircraftType) == -1) {
                     this.aircraftName.push(obj2.AircraftType)
                     this.aircraftCount.push(1);
                 } else if (this.aircraftName.indexOf(obj2.AircraftType) != -1) {
@@ -138,6 +155,19 @@ export class DataService {
                     this.aircraftCount[curIndex]++;
                 }
             }
+
         }
+    }
+
+    addLogbookItem(logItem) {
+        for (var i = 0; i < this.logbook.length; i++) {
+            var obj = this.logbook[i];
+            if (obj.Date == logItem.Date) {
+                obj.Flights.Flight.push(logItem.Flight);
+            } else {
+                this.logbook.push(logItem);
+            }
+        }
+
     }
 }

@@ -6,19 +6,21 @@
             <div class="col-lg-3">
                 <div class="form-group">
                     <label for="date">Date</label>
-                    <input type="date" class="form-control" id="date" placeholder="">
+                    <input type="date" class="form-control" id="date" [(ngModel)]="logItem.Date" >
                 </div>
                 <div class="form-group">
                     <h3>Departure</h3>
                     <label for="depPlace">Airport</label>
-                    <input type="text" class="form-control" id="depAirport" placeholder="XXXX">
+                    <input type="text" class="form-control" id="depAirport" placeholder="XXXX" [(ngModel)]="logItem.DepAirport">
+
                     <label for="depTime">Time</label>
-                    <input type="time" class="form-control" id="depTime" placeholder="hh:mm:ss">
+                    <input type="time" class="form-control" id="depTime" placeholder="hh:mm:ss" [(ngModel)]="logItem.DepTime">
                 </div>
                 <div class="form-group">
                     <h3>Arrival</h3>
                     <label for="arvPlace">Airport</label>
                     <input type="text" class="form-control" id="arvAirport" placeholder="XXXX">
+
                     <label for="arvTime">Time</label>
                     <input type="time" class="form-control" id="arvtime" placeholder="hh:mm:ss">
                 </div>
@@ -29,6 +31,7 @@
                     <h3>Single Pilot Time</h3>
                     <label for="SEtime">SE</label>
                     <input type="time" class="form-control" id="SEtime">
+
                     <label for="MEtime">ME</label>
                     <input type="time" class="form-control" id="MEtime">
                 </div>
@@ -44,6 +47,7 @@
                     <h3>Operational Condition Time</h3>
                     <label for="nightTime">Night</label>
                     <input type="time" class="form-control" id="nightTime">
+
                     <label for="ifrTime">IFR</label>
                     <input type="time" class="form-control" id="ifrTime">
                 </div>
@@ -92,6 +96,7 @@
                     <h3>Aircraft</h3>
                     <label for="aircraftType">Type</label>
                     <input type="text" class="form-control" id="aircraftType" placeholder="XXXXXX">
+
                     <label for="aircraftReg">Registration</label>
                     <input type="text" class="form-control" id="aircraftReg" placeholder="XXXXXX">
                 </div>
@@ -103,7 +108,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <button class="btn">Add new item</button>
+                <button class="btn" (click)="addLogItem()">Add new item</button>
             </div>
         </div>
         
