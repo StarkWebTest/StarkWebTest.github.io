@@ -17,8 +17,6 @@ export class AddNewComponent {
 
 
     addLogItem() {
-        //this.dataService.addLogbookItem(this.logItem);
-        console.log(this.logItem);
-        //this.logItem = [];
+
     }
 }

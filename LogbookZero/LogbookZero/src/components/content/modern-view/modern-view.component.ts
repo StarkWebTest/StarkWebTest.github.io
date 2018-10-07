@@ -32,7 +32,7 @@ export class ModernViewComponent implements OnInit {
     };
     
     ngOnInit() {
-        Plotly.newPlot("flights-aircraft", this.data, this.layout, {staticPlot: true});
+        Plotly.newPlot("flights-aircraft", this.data, this.layout, { responsive: true});
     }
 
 }
