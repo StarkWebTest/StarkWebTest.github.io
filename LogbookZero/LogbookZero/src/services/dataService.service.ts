@@ -2,22 +2,8 @@ import { Injectable, Output, EventEmitter, Inject } from '@angular/core';
 
 @Injectable()
 export class DataService {
-    logbookFormat = [
-        {
-            Date: '',
-            Flights: {
-                Flight: [
-                    {
-                        depAirport: '',
-                        depTime: ''
-                    }
-                ]
-            }
-        }
-    ]
 
-
-    oldLogbook = [
+    logbook = [
         {
             Pilot: 'Joey Lounsbury',
             Date: '6/3/2018',
@@ -133,7 +119,6 @@ export class DataService {
         }
     ]
 
-    logbook = [];
     aircraftName = [];
     aircraftCount = []
     getAllData() {
@@ -159,15 +144,5 @@ export class DataService {
         }
     }
 
-    addLogbookItem(logItem) {
-        for (var i = 0; i < this.logbook.length; i++) {
-            var obj = this.logbook[i];
-            if (obj.Date == logItem.Date) {
-                obj.Flights.Flight.push(logItem.Flight);
-            } else {
-                this.logbook.push(logItem);
-            }
-        }
 
-    }
 }
