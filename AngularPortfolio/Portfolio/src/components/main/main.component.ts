@@ -21,6 +21,7 @@ export class MainComponent {
         window.removeEventListener('scroll', this.scroll, true);
     }
 
+
     scroll = (): void => {      
         if (this.content.nativeElement.scrollTop > 0) {
             this.isContentActive = true;
@@ -41,15 +42,15 @@ export class MainComponent {
     ];
 
      languages = [
-         { language: 'C# - LINQ - Xamarin' },
-         { language: 'Java - JavaFx' },
-         { language: 'HTML - Javascript - Bootstrap/CSS' },
-         { language: 'XAML' },
-         { language: 'AngularJS - Angular' },
-         { language: 'Ruby On Rails' },
-         { language: 'R - RShiny' },
-         { language: 'Python - Pandas - Numpy' },
-         { language: 'SQL' }
+         { language: 'C# - LINQ - Xamarin', skill: '45' },
+         { language: 'Java - JavaFx', skill: '70' },
+         { language: 'HTML - Javascript - Bootstrap/CSS', skill: '80' },
+         { language: 'XAML', skill: '50' },
+         { language: 'AngularJS - Angular', skill: '60' },
+         { language: 'Ruby On Rails', skill: '20' },
+         { language: 'R - RShiny', skill: '70' },
+         { language: 'Python - Pandas - Numpy', skill: '20' },
+         { language: 'SQL', skill: '65' }
      ];
 
     title = "Work Experience";
