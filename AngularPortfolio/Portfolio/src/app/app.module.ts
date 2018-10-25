@@ -1,18 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {  } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { SidebarComponent } from '../components/sidebar/sidebar.component';
-import { ContentComponent } from '../components/content/content.component';
 
+import { MainComponent } from '../components/main/main.component';
 
 import { ToggleService } from '../services/toggleService.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    ContentComponent
+    MainComponent,
+    
   ],
   imports: [
     BrowserModule
