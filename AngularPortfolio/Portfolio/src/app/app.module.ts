@@ -8,6 +8,8 @@ import { MainComponent } from '../components/main/main.component';
 
 import { ToggleService } from '../services/toggleService.service';
 
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,8 @@ import { ToggleService } from '../services/toggleService.service';
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgCircleProgressModule.forRoot()
   ],
   providers: [
     ToggleService

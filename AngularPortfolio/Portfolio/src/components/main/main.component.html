@@ -3,54 +3,22 @@
 </div>
 <div class="container-fluid">
     <div class="top-bar" [class.active]="isTopBarActive">
-        <p style="opacity: 1;">Cameron Michael Stark</p>
+        <p style="opacity: 1;">{{ name }}</p>
     </div>
 
     <div class="content" id="content" #content [class.active]='isContentActive'>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
-        <h1>Test</h1>
-        <br>
+        <div class="education">
+            <h2>Backelors Of Science in Software Engineering</h2>
+            <h3><i>Embry-Riddle Aeronuatical University</i></h3>
+        </div>
+        <div class="skils">
+            <circle-progress 
+                [percent]="85" 
+                [radius]="75" 
+                [outerStrokeWidth]="5" 
+                [innerStrokeWidth]="0" 
+                [outerStrokeColor]="'#00bcd4'"></circle-progress>
+        </div>
     </div>
 
     <!-- <div class="row">
