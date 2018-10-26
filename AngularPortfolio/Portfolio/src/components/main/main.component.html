@@ -11,11 +11,45 @@
             <h2>Backelors Of Science in Software Engineering</h2>
             <h3><i>Embry-Riddle Aeronuatical University</i></h3>
         </div>
-        <div class="skills" >
-           <div class="progress">
-               <div class="progress-bar" role="progressbar"  style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-           </div>
+        <div class="skills">
+            <h2>Languge Skill Levels</h2>
+            <div class="skill-item" *ngFor="let item of languages">
+                <h3 >{{ item.language }}</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="item.skill" aria-valuenow="100" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+            </div>
+            <br>
+            <h2>Software Skill Levels</h2>
+            <div class="skill-item" *ngFor="let item of softwares">
+                <h3 >{{ item.software }}</h3>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" [style.width]="item.skill" aria-valuenow="100" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+            </div>
         </div>
+
+        <div class="experience">
+            
+        </div>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>
+        <h1>test</h1>s
     </div>
 
     <!-- <div class="row">

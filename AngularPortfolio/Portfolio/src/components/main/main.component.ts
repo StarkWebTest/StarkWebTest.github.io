@@ -34,23 +34,23 @@ export class MainComponent {
     };
 
     softwares = [
-        { software: 'Microsoft Visual Studio' },
-        { software: 'IntelliJ' },
-        { software: 'RStudio' },
-        { software: 'Teradata' },
-        { software: 'Alteryx' }
+        { software: 'Microsoft Visual Studio', skill: '80%' },
+        { software: 'IntelliJ', skill: '70%' },
+        { software: 'RStudio', skill: '75%' },
+        { software: 'Teradata', skill: '60%' },
+        { software: 'Alteryx', skill: '75%' }
     ];
 
      languages = [
-         { language: 'C# - LINQ - Xamarin', skill: '45' },
-         { language: 'Java - JavaFx', skill: '70' },
-         { language: 'HTML - Javascript - Bootstrap/CSS', skill: '80' },
-         { language: 'XAML', skill: '50' },
-         { language: 'AngularJS - Angular', skill: '60' },
-         { language: 'Ruby On Rails', skill: '20' },
-         { language: 'R - RShiny', skill: '70' },
-         { language: 'Python - Pandas - Numpy', skill: '20' },
-         { language: 'SQL', skill: '65' }
+         { language: 'C# - LINQ - Xamarin', skill: '45%' },
+         { language: 'Java - JavaFx', skill: '70%' },
+         { language: 'HTML - Javascript - Bootstrap/CSS', skill: '80%' },
+         { language: 'XAML', skill: '50%' },
+         { language: 'AngularJS - Angular', skill: '60%' },
+         { language: 'Ruby On Rails', skill: '20%' },
+         { language: 'R - RShiny', skill: '70%' },
+         { language: 'Python - Pandas - Numpy', skill: '20%' },
+         { language: 'SQL', skill: '65%' }
      ];
 
     title = "Work Experience";
