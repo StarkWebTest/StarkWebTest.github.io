@@ -28,6 +28,7 @@ export class MainComponent {
             this.isContentActive = true;
             this.isTopBarActive = true;
         } else {
+            this.isSidebarActive = false;
             this.isContentActive = false;
             this.isTopBarActive = false;
         }
