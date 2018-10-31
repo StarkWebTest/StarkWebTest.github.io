@@ -12,6 +12,7 @@ export class MainComponent {
 
     isTopBarActive = false;
     isContentActive = false;
+    isSidebarActive = false;
 
     ngOnInit() {
          window.addEventListener('scroll', this.scroll, true);
@@ -32,6 +33,10 @@ export class MainComponent {
         }
         
     };
+
+    sidebar() {
+        this.isSidebarActive = !this.isSidebarActive;
+    }
 
     softwares = [
         { software: 'Microsoft Visual Studio', skill: '80%' },
@@ -54,6 +59,18 @@ export class MainComponent {
      ];
 
     title = "Work Experience";
+
+    projects = [
+        {
+            name: 'LogbookZero',
+            image: '',
+            language: 'Angular6',
+            desc1: 'Digital Logbook tracking and monitoring application for pilots'
+        },
+        {
+            name: ''
+        }
+    ]
 
     experience = [
         {

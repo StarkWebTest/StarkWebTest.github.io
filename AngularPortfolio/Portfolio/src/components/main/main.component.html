@@ -3,7 +3,16 @@
 </div>
 <div class="container-fluid">
     <div class="top-bar" [class.active]="isTopBarActive">
-        <p style="opacity: 1;">{{ name }}</p>
+        <i id="menu" class="fas fa-bars" [class.active]='isContentActive' (click)="sidebar()"></i>
+        <p id="name" style="opacity: 1;">{{ name }}</p>
+    </div>
+
+    <div class="sidebar" [class.active]="isSidebarActive">
+        <div class="sidebar-content">
+            <h3>Languages</h3>
+            <h3>Software</h3>
+            <h3>Experience</h3>
+        </div>
     </div>
 
     <div class="content" id="content" #content [class.active]='isContentActive'>
