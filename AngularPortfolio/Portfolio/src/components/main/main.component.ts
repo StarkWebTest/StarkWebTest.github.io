@@ -69,7 +69,9 @@ export class MainComponent {
             desc1: 'Digital Logbook tracking and monitoring application for pilots'
         },
         {
-            name: ''
+            name: 'Space Jam',
+            image: '',
+            language: 'AngularJS, SpotifyAPI, Google Sheets, Google App Scripts'
         }
     ]
 

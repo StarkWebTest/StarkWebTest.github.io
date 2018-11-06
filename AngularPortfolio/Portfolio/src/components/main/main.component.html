@@ -36,7 +36,7 @@
             </div>
         </div>
         <br>
-        <div class="skills-soft">
+        <div class="skills-soft" [class.active]='isContentActive'>
             <h2>Software Skill Levels</h2>
             <hr>
             <div class="skill-item" *ngFor="let item of softwares">
@@ -49,7 +49,7 @@
         </div>
 
 
-        <div class="experience">
+        <div class="experience" [class.active]='isContentActive'>
             <h2>Work Experience</h2>
             <hr>
             <div class="work-item" *ngFor="let item of experience">
@@ -89,68 +89,4 @@
         </div>
 
     </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-4">
-            <div class="information">
-                <h1 style="font-size: 45px;"><b>{{ name }}</b></h1>
-                <br>
-                <h2>Bachelors Of Science in Software Engineering</h2>
-                <h3><i>Embry-Riddle Aeronuatical University</i></h3>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12 col-sm-6 col-xs-6">
-                        <h4><b>LANGUAGES / FRAMEWORKS</b></h4>
-                        <h5 *ngFor="let item of languages">{{ item.language }}</h5>
-                    </div>
-                    <div class="col-lg-12 col-sm-6 col-xs-6">
-                        <br>
-                        <h4><b>Software</b></h4>
-                        <h5 *ngFor="let item of softwares">{{ item.software }}</h5>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-        <div class="col-lg-8">
-            <div class="experience">
-                <div class="work" *ngFor="let item of experience">
-                    <img class="img-fluid" style="height: 70px;" src="{{ item.logo }}">
-                    <h2>{{ item.name }}</h2>
-                    <h3>{{ item.position }}</h3>
-                    <div class="project" *ngFor="let project of item.projects">
-                        <h4>{{ project.title }}</h4>
-                        <div class="row" *ngIf="project.image != ''">
-                            <div class="col-lg-5">
-                                <img class="img-fluid" style="box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);"
-                                    src="{{ project.image }}">
-                            </div>
-                            <div class="col-lg-7">
-                                <br>
-                                <h5>{{ project.desc1 }}</h5>
-                                <br>
-                                <h5>{{ project.desc2 }}</h5>
-                                <br>
-                                <h5>{{ project.language }}</h5>
-                            </div>
-                        </div>
-                        <div class="row" *ngIf="project.image == ''">
-                            <div class="col-lg-12">
-                                <br>
-                                <h5>{{ project.desc1 }}</h5>
-                                <br>
-                                <h5>{{ project.desc2 }}</h5>
-                                <br>
-                                <h5>{{ project.language }}</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div> -->
 </div>
