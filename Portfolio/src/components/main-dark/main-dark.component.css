@@ -43,7 +43,7 @@ hr {
     color: #00bcd4;
     opacity: 1;
     transition: all 1s;
-    background-color: #FFF;
+    background-color: #424242;
 }
 
 .top-bar.active { 
@@ -58,7 +58,8 @@ hr {
 }
 
 .sidebar {
-    background-color: #FFF;
+    background-color: #424242;
+    color: #FFF;
     z-index: 99;
     margin-left: -350px;
     width: 350px;
@@ -80,13 +81,14 @@ hr {
 .content {
     height: calc(100% - 80px);
     margin-top: 80px;
-    background-color: #FFF;
+    background-color: #424242;
     opacity: 1;
     width: 100%;
     text-align: center;
     transition: all 1s;
     overflow-y: scroll;
     overflow-x: hidden;
+    color: #FFF;
 }
 
 .content.active {
@@ -94,7 +96,7 @@ hr {
     margin-top: 50px;
     transition: all 1s;
     opacity: 1;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(66,66,66,0.6);
 }
 
 ::-webkit-scrollbar {
@@ -113,8 +115,15 @@ hr {
     margin-top: 10px;
 }
 
-.skills-lang, .skills-soft {
+.section-header {
     margin-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5px;
+}
+
+.skills-lang, .skills-soft {
+    margin-top: 0px;
     display: block;
     padding: 5px;
     transition: all 1s;
@@ -125,7 +134,7 @@ hr {
 .skills-lang.active, .skills-soft.active {
     border-radius: 10px;
     transition: all 1s;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(66,66,66,0.6);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
 
@@ -144,8 +153,8 @@ hr {
     transition: width 1s all;
 }
 
-.experience {
-    margin-top: 40px;
+.experience, .projects {
+    margin-top: 0px;
     display: block;
     padding: 5px;
     margin-left: 5%;
@@ -153,16 +162,19 @@ hr {
     transition: all 1s;
 }
 
-.experience.active {
+.experience.active, .projects.active {
     border-radius: 10px;
-    transition: all 1s;
-    background-color: rgba(255,255,255,0.6);
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+    
 }
 
-.work-item {
-    margin-top: 20px;
-    margin-bottom: 0px;
+.work-item, .project-item {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    transition: all 1s;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(66,66,66,0.6);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
 
 .project {

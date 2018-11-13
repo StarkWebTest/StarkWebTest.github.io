@@ -2,11 +2,11 @@ import { Component, HostListener, Inject, ViewChild, ElementRef } from '@angular
 import { DOCUMENT } from '@angular/common';
 
 @Component({
-    selector: 'main',
-    templateUrl: './main.component.html',
-    styleUrls: ['./main.component.css']
+    selector: 'main-light',
+    templateUrl: './main-light.component.html',
+    styleUrls: ['./main-light.component.css']
 })
-export class MainComponent {
+export class MainLightComponent {
     @ViewChild('content') content: ElementRef;
     name = 'CAMERON MICHAEL STARK';
 
@@ -65,13 +65,38 @@ export class MainComponent {
         {
             name: 'LogbookZero',
             image: '',
-            language: 'Angular6',
-            desc1: 'Digital Logbook tracking and monitoring application for pilots'
+            language: 'Angular6, HTML',
+            purpose: 'Personal Project',
+            desc: 'Digital Logbook tracking and monitoring application for pilots',
+            features1: 'Pilots can manually input log items, or scan image of their logbook to add a new log item',
+            features2: 'Displays log items in graphical and grouped format or in table format'   
         },
         {
             name: 'Space Jam',
             image: '',
-            language: 'AngularJS, SpotifyAPI, Google Sheets, Google App Scripts'
+            language: 'AngularJS, SpotifyAPI, Google Sheets, Google App Scripts',
+            purpose: 'University Course Group Project',
+            desc: 'Community focused music playing application',
+            features1: 'Users can walk around and listen to songs placed in locations by other users',
+            features2: 'Acquire points and songs by rating and posting songs to locations'
+        },
+        {
+            name: 'Washr',
+            image: '',
+            language: 'AngularJS, HTML, Bootstrap',
+            purpose: 'Kickstart Weekend Competition Project',
+            desc: 'A peer to peer product as a service application for car washing',
+            features1: "Allows a user to either find a good priced and good service car wash",
+            features2: "Allows a user to put them selves out there to be a car washer and get business"
+        },
+        {
+            name: 'METEOR',
+            image: '',
+            language: 'AngularJS, HTML, Bootstrap, Arduino C++',
+            purpose: 'HackRiddle Hackathon Project',
+            desc: 'A IoT dashboard and device, for collecting rare minerals from the bottom of glaciers that are deposited by meteorites',
+            features1: 'The IoT device can send data back to the site for payload, location and status',
+            features2: 'The site allwos the user to track all IoT devices and see the data associated with each'
         }
     ]
 

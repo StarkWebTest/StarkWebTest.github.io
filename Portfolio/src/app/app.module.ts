@@ -4,7 +4,8 @@ import {  } from '@angular/common';
 
 import { AppComponent } from './app.component';
 
-import { MainComponent } from '../components/main/main.component';
+import { MainLightComponent } from '../components/main-light/main-light.component';
+import { MainDarkComponent } from '../components/main-dark/main-dark.component';
 
 import { ToggleService } from '../services/toggleService.service';
 
@@ -12,8 +13,8 @@ import { ToggleService } from '../services/toggleService.service';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    
+    MainLightComponent,
+    MainDarkComponent
   ],
   imports: [
     BrowserModule
