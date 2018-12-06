@@ -22,6 +22,9 @@ export class MainDarkComponent {
         window.removeEventListener('scroll', this.scroll, true);
     }
 
+    scrollTo(el) {
+        document.getElementById(el).scrollIntoView({ behavior: 'smooth' });
+    }
 
     scroll = (): void => {      
         if (this.content.nativeElement.scrollTop > 0) {

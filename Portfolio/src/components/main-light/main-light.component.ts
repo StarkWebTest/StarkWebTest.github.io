@@ -22,6 +22,9 @@ export class MainLightComponent {
         window.removeEventListener('scroll', this.scroll, true);
     }
 
+    scrollTo(el) {
+        document.getElementById(el).scrollIntoView({ behavior: 'smooth' });
+    }
 
     scroll = (): void => {      
         if (this.content.nativeElement.scrollTop > 0) {
@@ -56,7 +59,9 @@ export class MainLightComponent {
          { language: 'Ruby On Rails', skill: '20%' },
          { language: 'R - RShiny', skill: '70%' },
          { language: 'Python - Pandas - Numpy', skill: '20%' },
-         { language: 'SQL', skill: '65%' }
+         { language: 'SQL', skill: '65%' },
+         { language: 'Ionic - TypeScript', skill: '10%' },
+         { language: 'Flutter - Dart', skill: '15%' }
      ];
 
     title = "Work Experience";

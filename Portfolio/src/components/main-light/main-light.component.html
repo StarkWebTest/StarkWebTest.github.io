@@ -7,24 +7,24 @@
 
     <div class="sidebar" [class.active]="isSidebarActive">
         <div class="sidebar-content">
-            <h3>Home</h3>
+            <a class="sidebar-nav" (click)="scrollTo('home')"><h3>Home</h3></a>
             <hr>
-            <h3>Languages</h3>
+            <a class="sidebar-nav" (click)="scrollTo('language')"><h3>Languages</h3></a>
             <hr>
-            <h3>Software</h3>
+            <a class="sidebar-nav" (click)="scrollTo('software')"><h3>Software</h3></a>
             <hr>
-            <h3>Experience</h3>
+            <a class="sidebar-nav" (click)="scrollTo('experience')"><h3>Experience</h3></a>
             <hr>
-            <h3>Projects</h3>
+            <a class="sidebar-nav" (click)="scrollTo('project')"><h3>Projects</h3></a>
         </div>
     </div>
 
     <div class="content" id="content" #content [class.active]='isContentActive'>
-        <div class="education">
+        <div class="education" id="home">
             <h2>Bachelors Of Science in Software Engineering</h2>
             <h3><i>Embry-Riddle Aeronuatical University</i></h3>
         </div>
-        <div class="section-header">
+        <div class="section-header" id="language">
             <h2>Languge Skills</h2>
             <hr>
         </div>
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-header">
+        <div class="section-header" id="software">
             <h2>Software Skills</h2>
             <hr>
         </div>
@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-header">
+        <div class="section-header" id="experience">
             <h2>Work Experience</h2>
             <hr>
         </div>
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div class="section-header">
+        <div class="section-header" id="project">
             <h2>Projects</h2>
             <hr>
         </div>
