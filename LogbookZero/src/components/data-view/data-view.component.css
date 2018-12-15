@@ -1,4 +1,5 @@
 .view {
-    height: calc(100vh - 115px);
+    height: calc(100vh - 113px);
+    overflow: hidden;
     background-color: #eeeeee;
 }
