@@ -1,4 +1,10 @@
 .view {
-    height: calc(100vh - 115px);
-    background-color: #eeeeee;
+    height: calc(100vh - 127px);
+    overflow: hidden;
+    margin-top: 10px;
+    z-index: 0;
+    padding: 10px;
+    background-color: #FFF;
 }
+
+

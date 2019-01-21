@@ -1,0 +1,52 @@
+<div class="view">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Welcome To LogbookZero</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <!-- <button mat-flat-button (click)="LoginView()">Existing Account</button> -->
+
+            <div class="login" *ngIf="login">
+                <p>Please Login To Your Existing Account</p>
+                <mat-form-field>
+                    <input [(ngModel)]="loginInfo.email" matInput type="email" placeholder="Email">
+                </mat-form-field>
+                <mat-form-field>
+                    <input [(ngModel)]="loginInfo.password" matInput type="password" placeholder="Password">
+                </mat-form-field>
+                <button mat-flat-button (click)="createView()">Create Account</button>
+                <button mat-flat-button (click)='checkUserCredentials()'>Login</button>
+            </div>
+            <div class="create" *ngIf="create">
+                <p>Please Follow The Steps To Create An Account</p>
+                <mat-vertical-stepper [linear]=true>
+                    <mat-step label="Enter Your Email">
+                        <mat-form-field>
+                            <input [(ngModel)]="userInfo.Email" matInput type="email" placeholder="Email">
+                        </mat-form-field>
+                        <button mat-flat-button matStepperNext>Next</button>
+                    </mat-step>
+                    <mat-step label="Enter First And Last Name">
+                        <mat-form-field>
+                            <input [(ngModel)]="userInfo.FirstName" matInput placeholder="First Name">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input [(ngModel)]="userInfo.LastName" matInput placeholder="Last Name">
+                        </mat-form-field>
+                        <button mat-flat-button matStepperNext>Next</button>
+                    </mat-step>
+                    <mat-step label="Create A Password">
+                        <mat-form-field>
+                            <input [(ngModel)]="userInfo.Pass" matInput type="password" placeholder="Create Password">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input [(ngModel)]="passwordConfirm" matInput type="password" (keyup)="checkPassword(userInfo.password)" placeholder="Confirm Password">
+                        </mat-form-field>
+                        <p class="error">{{ errorText }}</p>
+                        <button mat-flat-button (click)="addUser()">Done</button>
+                    </mat-step>
+                </mat-vertical-stepper>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

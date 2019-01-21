@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+
+
 
 @Component({
     selector: 'main',
@@ -7,6 +10,13 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
     opened: boolean;
+    isLoggedIn = false;
 
+    constructor() {
+        this.opened = true;
+    }
+
+
+    
     title = "LogbookZero"
 }

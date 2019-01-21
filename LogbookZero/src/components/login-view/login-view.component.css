@@ -1,0 +1,28 @@
+.view {
+    background-color: #00bcd4;
+    height: 100vh;
+    padding-top: 10%;
+}
+
+.mat-card {
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+}
+
+.login, .create {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.error {
+    color: #b71c1c;
+}
+
+.mat-input-element {
+    caret-color: #00bcd4;
+}
+
+
+

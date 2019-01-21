@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
     selector: 'sidenav-view',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class SidenavViewComponent {
     opened: boolean;
+    userInfo: {};
 
+    constructor(
 
-}
+    ){}
+
+} 
