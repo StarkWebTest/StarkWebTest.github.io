@@ -14,6 +14,7 @@
                 <mat-form-field>
                     <input [(ngModel)]="loginInfo.password" matInput type="password" placeholder="Password">
                 </mat-form-field>
+                <p class="error">{{ errorText }}</p>
                 <button mat-flat-button (click)="createView()">Create Account</button>
                 <button mat-flat-button (click)='checkUserCredentials()'>Login</button>
             </div>
@@ -40,10 +41,10 @@
                             <input [(ngModel)]="userInfo.Pass" matInput type="password" placeholder="Create Password">
                         </mat-form-field>
                         <mat-form-field>
-                            <input [(ngModel)]="passwordConfirm" matInput type="password" (keyup)="checkPassword(userInfo.password)" placeholder="Confirm Password">
+                            <input [(ngModel)]="passwordConfirm" matInput type="password" (keydown)="checkPassword(userInfo.password)" placeholder="Confirm Password">
                         </mat-form-field>
                         <p class="error">{{ errorText }}</p>
-                        <button mat-flat-button (click)="addUser()">Done</button>
+                        <button mat-flat-button (click)="postNewUser()">Done</button>
                     </mat-step>
                 </mat-vertical-stepper>
             </div>

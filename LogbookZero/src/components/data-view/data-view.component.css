@@ -4,7 +4,7 @@
     margin-top: 10px;
     z-index: 0;
     padding: 5px;
-    background-color: #FFF;
+    /* background-color: #FFF; */
 }
 
 #list-view, .row {

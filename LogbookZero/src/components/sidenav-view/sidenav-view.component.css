@@ -6,23 +6,49 @@
 
 .sidebar-header {
     background-color: #00bcd4;
-    height: 200px;
+    height: 112px;
     width: 100%;
     text-align: center;
     padding: 5px;
     color: #FFF;
 }
 
+.sidebar-content {
+    /* background-color: lightblue; */
+    height: calc(100vh - 172px);
+    width: 100%;
+    padding: 5px;
+}
+
+.ratings, .recents {
+    padding: 5px;
+}
+
+.section-header {
+    font-size: 18px;
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+}
+
+.sidebar-footer {
+    /* background-color: lightgreen; */
+    height: 60px;
+}
+
 .header-name {
-    margin-top: 60px;
+    margin-top: 5px;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .header-hours, .header-rating {
-    font-size: 19px;
+    font-size: 16px;
 }
 
 p {
     margin: 0;
+    font-weight: 100;
 }

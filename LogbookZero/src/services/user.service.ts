@@ -25,16 +25,16 @@ export class UserService {
     }
 
     postNewUser(user: User) : Observable<User> {
-        var url = this.baseUrl + "?email=" + user.Email + '&password=' + user.Pass + '&firstName=' + user.FirstName + '&lastName=' + user.LastName;
-        return this.http.post<User>(url, null, httpOptions).pipe(
+        //var url = this.baseUrl + "?email=" + user.Email + '&password=' + user.Pass + '&firstName=' + user.FirstName + '&lastName=' + user.LastName;
+        return this.http.post<User>(this.baseUrl, user, httpOptions).pipe(
             catchError(this.handleError('NewUser', user))
         ); 
     }
 
-    checkUserCredentials(email, password) : Observable<User[]> {
+    checkUserCredentials(email, password) : Observable<User> {
         var url = this.baseUrl + '?email=' + email;
-        return this.http.get<User[]>(url, httpOptions).pipe(
-            catchError(this.handleError('checkUser', []))
+        return this.http.get<User>(url, httpOptions).pipe(
+            catchError(this.handleError('checkUser', email))
         );
     }
 }

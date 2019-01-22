@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from '../../models/user.model';
 import { UserService } from '../../services/user.service';
@@ -9,13 +10,13 @@ import { UserService } from '../../services/user.service';
     styleUrls: ['./login-view.component.css']
 })
 export class LoginViewComponent {
-    user: User[];
+    user: User = new User();
     constructor (
+        private router: Router,
         private userService: UserService
     ) {}
 
-
-    userInfo: User;
+    userInfo: User = new User();
 
     loginInfo = {
         email: '',
@@ -46,7 +47,7 @@ export class LoginViewComponent {
         var newUser = this.userInfo;
 
         this.userService.postNewUser(newUser).subscribe(
-            user => this.user.push(user)
+            user =>  this.user = user
         )
     }
 
@@ -55,6 +56,11 @@ export class LoginViewComponent {
             user => {
                 this.user = user;
                 console.log(this.user);
+                if (this.user.Pass == this.loginInfo.password) {
+                    this.router.navigate(['home']);
+                } else {
+                    this.errorText = "Password/Email Incorrect";
+                }
             }
         );
         

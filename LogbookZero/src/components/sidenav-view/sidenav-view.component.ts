@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Documents } from '../../models/documents.model';
 
 @Component({
     selector: 'sidenav-view',
