@@ -18,7 +18,6 @@ export class UserService {
     private handleError: HandleError;
     constructor (
         private http: HttpClient,
-        private router: Router,
         httpErrorHandler: HttpErrorHandler
     ) {
         this.handleError = httpErrorHandler.createHandleError('UserService');

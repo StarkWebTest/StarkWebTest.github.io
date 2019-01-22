@@ -24,6 +24,7 @@ import { DataViewComponent } from '../components/data-view/data-view.component';
 import { TableViewComponent } from '../components/table-view/table-view.component';
 import { SidenavViewComponent } from '../components/sidenav-view/sidenav-view.component';
 import { LoginViewComponent } from '../components/login-view/login-view.component';
+import { LandingViewComponent } from '../components/landing-view/landing-view.component';
 
 import { UserService } from '../services/user.service';
 import { HttpErrorHandler } from '../services/HttpErrorHandler.service';
@@ -32,6 +33,10 @@ import { MessageService } from '../services/message.service';
 const ROUTES: Route[] = [
   {
     path: '',
+    component: LandingViewComponent
+  },  
+  {
+    path: 'login',
     component: LoginViewComponent
   },
   {
@@ -47,7 +52,8 @@ const ROUTES: Route[] = [
     DataViewComponent,
     TableViewComponent,
     SidenavViewComponent,
-    LoginViewComponent
+    LoginViewComponent,
+    LandingViewComponent
   ],
   imports: [
     BrowserModule,
