@@ -15,6 +15,7 @@ export class LoginViewComponent {
         private router: Router,
         private userService: UserService
     ) {}
+    loading = false;
 
     userInfo: User = new User();
 
@@ -52,13 +53,16 @@ export class LoginViewComponent {
     }
 
     checkUserCredentials() {
+        this.loading = true;
         this.userService.checkUserCredentials(this.loginInfo.email, this.loginInfo.password).subscribe(
             user => {
                 this.user = user;
                 console.log(this.user);
                 if (this.user.Pass == this.loginInfo.password) {
+                    this.loading = false;
                     this.router.navigate(['home']);
                 } else {
+                    this.loading = false;
                     this.errorText = "Password/Email Incorrect";
                 }
             }

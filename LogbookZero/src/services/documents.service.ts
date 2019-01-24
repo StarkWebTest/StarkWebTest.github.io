@@ -25,4 +25,11 @@ export class DocumentsService {
     ) {
         this.handleError = httpErrorHandler.createHandleError("DocumentsService")
     }
+
+    getUserDocuments(Email) : Observable<Documents> {
+        var url = this.baseUrl + "?Email=" + Email;
+        return this.http.get<Documents>(url, httpOptions).pipe(
+            catchError(this.handleError('getUserDocuments', Email))
+        );
+    }
 }

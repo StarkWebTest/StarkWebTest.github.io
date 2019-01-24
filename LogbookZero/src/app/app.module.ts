@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { Route, RouterModule } from '@angular/router';
@@ -27,6 +28,8 @@ import { LoginViewComponent } from '../components/login-view/login-view.componen
 import { LandingViewComponent } from '../components/landing-view/landing-view.component';
 
 import { UserService } from '../services/user.service';
+import { DocumentsService } from '../services/documents.service';
+import { CurrentUserService } from '../services/currentUser.service';
 import { HttpErrorHandler } from '../services/HttpErrorHandler.service';
 import { MessageService } from '../services/message.service';
 
@@ -71,10 +74,13 @@ const ROUTES: Route[] = [
     MatCardModule,
     MatInputModule,
     MatStepperModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     UserService,
+    DocumentsService,
+    CurrentUserService,
     HttpErrorHandler,
     MessageService
   ],

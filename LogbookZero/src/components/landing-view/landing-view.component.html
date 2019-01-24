@@ -1,59 +1,27 @@
-<div class="bg" style="background-image: url('../../assets/images/Plane1.jpg')">
-    <div class="view">
-        <mat-toolbar class="mat-elevation-z4">
-            <p class="title">LogbookZero</p>
-        </mat-toolbar>
-        <div class="row" id="information">
-            <mat-card style="margin: 2% 15%;">
-                <mat-card-header>
-                    <p style="font-size: 22px;">Why Use LogbookZero?</p>
-                </mat-card-header>
-                <mat-card-content>
-                    <div class="row" style="margin-top: 10px;">
-                        <div class="col l4">
-                            <p class="detail">Provides Fast and Detailed information on your logbook</p>
-                        </div>
-                        <div class="col l4">
-                            <p class="detail">Visualize your flights with charts, summarizations and view in a table</p>
-                        </div>
-                        <div class="col l4">
-                            <p class="detail">Keep upto date with your license and rating renewal deadlines</p>
-                        </div>
-                    </div>
+<div class="view">
+    <mat-toolbar class="mat-elevation-z4">
+        <mat-toolbar-row>
+            <span>LogbookZero</span>
+            <span class="spacer"></span>
+            <button mat-raised-button (click)="login()">Login</button>
+        </mat-toolbar-row>
+    </mat-toolbar>
 
-                </mat-card-content>
+    <div class="row">
+        <div class="col l4 s12">
+            <mat-card>
 
-
-                
             </mat-card>
         </div>
-        <div class="row">
-            <div class="col l2"></div>
-            <div class="col l3">
-                <mat-card>
-                    <mat-card-header>
-                        <mat-card-title>
-                            Beta Plan
-                        </mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <ul>
-                            <li>- Unlimited Hours</li>
-                            <br>
-                            <li>- Ability to see flight data in charts and table</li>
-                            <br>
-                            <li>- Automatic Upgrade to Paid Plan on release</li>
-                            <br>
-                        </ul>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-button (click)="login()">Login / Create Account</button>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-            <div class="col l3">
+        <div class="col l4 s12">
+            <mat-card>
 
-            </div>
+            </mat-card>
+        </div>
+        <div class="col l4 s12">
+            <mat-card>
+
+            </mat-card>
         </div>
     </div>
 </div>

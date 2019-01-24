@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { Documents } from '../../models/documents.model';
 
+import { DocumentsService } from '../../services/documents.service';
+
 @Component({
     selector: 'sidenav-view',
     templateUrl: './sidenav-view.component.html',
@@ -12,7 +14,7 @@ export class SidenavViewComponent {
     userInfo: {};
 
     constructor(
-
+        private documentsService : DocumentsService
     ){}
 
 } 
