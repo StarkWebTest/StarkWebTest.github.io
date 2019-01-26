@@ -32,4 +32,10 @@ export class DocumentsService {
             catchError(this.handleError('getUserDocuments', Email))
         );
     }
+    
+    postNewUserDocument(document : Documents) : Observable<Documents> {
+        return this.http.post<Documents>(this.baseUrl, document, httpOptions).pipe(
+            catchError(this.handleError("NewDocument", document))
+        );
+    }
 }

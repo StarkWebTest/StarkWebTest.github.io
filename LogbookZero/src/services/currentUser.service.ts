@@ -11,10 +11,19 @@ export class CurrentUserService {
     private currentUser;
 
     setCurrentUser(email) {
-        this.currentUser = email;
+        try {
+            localStorage.setItem('username', JSON.stringify(email));
+        } catch (e) {
+            console.error('Error saving to localStorage', e);
+        }
     }
 
     getCurrentUser() {
-        return this.currentUser;
+        try {
+            return JSON.parse(localStorage.getItem('username'));
+        } catch (e) {
+            console.error('Error getting data from localStorage', e);
+            return null;
+        }
     }
 }

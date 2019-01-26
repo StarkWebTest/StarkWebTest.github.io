@@ -33,11 +33,28 @@
 }
 
 .title {
-    margin-top: 20px;
+    margin-left: 10px;
     font-size: 25px;
     font-weight: 100;
 }
 
 .mat-tab-group {
     background-color: #FFF;
+}
+
+#addnew {
+    z-index: 999999;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.mat-fab.mat-accent {
+    color: #FFF;
+    background-color: #00bcd4;
+}
+
+#addButton {
+    margin-left: 4px;
+    font-size: 40px;
 }

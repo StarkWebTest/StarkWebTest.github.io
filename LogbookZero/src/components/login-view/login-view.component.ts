@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { User } from '../../models/user.model';
 import { UserService } from '../../services/user.service';
+import { CurrentUserService} from '../../services/currentUser.service';
 
 @Component({
     selector: 'login-view',
@@ -13,7 +14,8 @@ export class LoginViewComponent {
     user: User = new User();
     constructor (
         private router: Router,
-        private userService: UserService
+        private userService: UserService,
+        private currentUserService : CurrentUserService
     ) {}
     loading = false;
 
@@ -60,6 +62,7 @@ export class LoginViewComponent {
                 console.log(this.user);
                 if (this.user.Pass == this.loginInfo.password) {
                     this.loading = false;
+                    this.currentUserService.setCurrentUser(this.user.Email);
                     this.router.navigate(['home']);
                 } else {
                     this.loading = false;

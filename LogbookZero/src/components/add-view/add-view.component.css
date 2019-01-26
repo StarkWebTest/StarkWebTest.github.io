@@ -1,0 +1,62 @@
+.mat-toolbar {
+    background-color: #00bcd4;
+    color: #FFF;
+    z-index: 999;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.mat-tab-group {
+    background-color: #FFF;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.header {
+    font-size: 20px;
+    margin: 0;
+}
+
+mat-card-header {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #00bcd4;
+    color: #FFF;
+}
+
+mat-card-subtitle {
+    color: #FFF;
+    opacity: .9;
+}
+
+.card {
+    margin: auto;
+    width: 80%;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+.form-group {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+
+.error {
+    color: #b71c1c;
+}
+
+.view {
+    height: calc(100vh - 127px);
+    overflow: hidden;
+    margin-top: 10px;
+    z-index: 0;
+    padding: 5px;
+    /* background-color: #FFF; */
+}

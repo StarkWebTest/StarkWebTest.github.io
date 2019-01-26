@@ -15,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { Route, RouterModule } from '@angular/router';
@@ -26,6 +28,7 @@ import { TableViewComponent } from '../components/table-view/table-view.componen
 import { SidenavViewComponent } from '../components/sidenav-view/sidenav-view.component';
 import { LoginViewComponent } from '../components/login-view/login-view.component';
 import { LandingViewComponent } from '../components/landing-view/landing-view.component';
+import { AddViewComponent } from '../components/add-view/add-view.component';
 
 import { UserService } from '../services/user.service';
 import { DocumentsService } from '../services/documents.service';
@@ -45,6 +48,10 @@ const ROUTES: Route[] = [
   {
     path: 'home',
     component: MainComponent
+  },
+  {
+    path: 'add',
+    component: AddViewComponent
   }
 ]
 
@@ -56,7 +63,8 @@ const ROUTES: Route[] = [
     TableViewComponent,
     SidenavViewComponent,
     LoginViewComponent,
-    LandingViewComponent
+    LandingViewComponent,
+    AddViewComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +83,9 @@ const ROUTES: Route[] = [
     MatInputModule,
     MatStepperModule,
     MatFormFieldModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     UserService,

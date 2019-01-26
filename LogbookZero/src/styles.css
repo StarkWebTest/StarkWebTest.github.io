@@ -49,3 +49,7 @@ body {
 .mat-progress-spinner circle, .mat-spinner circle {
     stroke: #00bcd4;
 }
+
+.mat-datepicker-toggle-active {
+    color: #00bcd4;
+}
