@@ -33,7 +33,7 @@ mat-card-subtitle {
     color: #FFF;
     opacity: .9;
 }
-
+ 
 .card {
     margin: auto;
     width: 80%;
@@ -59,4 +59,12 @@ mat-card-subtitle {
     z-index: 0;
     padding: 5px;
     /* background-color: #FFF; */
+}
+
+mat-form-field {
+    margin: 5px;
+}
+
+.input-row {
+    display: flex;
 }

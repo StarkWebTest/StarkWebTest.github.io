@@ -35,7 +35,34 @@
     </mat-tab>
     <mat-tab label="Add New Flight Log">
         <div class="view">
-
+            <mat-card class="card">
+                <mat-card-header>
+                    <mat-card-title>Add New Flight Log</mat-card-title>
+                    <mat-card-subtitle>Add Flight Log Manually or Upload an Image of your Logbook Page</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content class="form-group">
+                    <p class="header">Create New Flight Log</p>
+                    <div class="input-row">
+                        <mat-form-field>
+                            <input matInput [matDatepicker]="flightPicker" placeholder="Choose Flight Date">
+                            <mat-datepicker-toggle matSuffix [for]="flightPicker"></mat-datepicker-toggle>
+                            <mat-datepicker #flightPicker startView="year"></mat-datepicker>
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter Aircraft Type">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <input matInput placeholder="Enter Aircraft Registration">
+                        </mat-form-field>
+                        <mat-form-field>
+                            <mat-select placeholder="Choose Aircraft Classification">
+                                <mat-option value="single">Single Engine</mat-option>
+                                <mat-option value="multi">Multi Engine</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </mat-card-content>
+            </mat-card>
         </div>
     </mat-tab>
 </mat-tab-group>
