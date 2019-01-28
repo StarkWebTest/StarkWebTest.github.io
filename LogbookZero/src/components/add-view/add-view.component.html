@@ -42,95 +42,101 @@
                 </mat-card-header>
                 <mat-card-content class="form-group">
                     <p class="header">Create New Flight Log</p>
-                    <mat-horizontal-stepper [linear]="false">
-                        <mat-step label="Flight Information">
+                    <mat-horizontal-stepper labelPosition="bottom" [linear]="false">
+                        <mat-step label="Flight Information" [optional]="false">
                             <mat-form-field>
-                                <input matInput [matDatepicker]="flightPicker" placeholder="Choose Flight Date">
+                                <input [(ngModel)]="logItem.FlightDate" matInput [matDatepicker]="flightPicker" placeholder="Choose Flight Date">
                                 <mat-datepicker-toggle matSuffix [for]="flightPicker"></mat-datepicker-toggle>
                                 <mat-datepicker #flightPicker startView="year"></mat-datepicker>
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Aircraft Type">
+                                <input [(ngModel)]="logItem.AircraftType" matInput placeholder="Enter Aircraft Type">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Aircraft Registration">
+                                <input [(ngModel)]="logItem.AircraftRegistration" matInput placeholder="Enter Aircraft Registration">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Pilot, Instructor, Copilot, etc.">
+                                <input [(ngModel)]="logItem.Position" matInput placeholder="Enter Pilot, Instructor, Copilot, etc.">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter the Origin Airport Code">
+                                <input [(ngModel)]="logItem.FromCode" matInput placeholder="Enter the Origin Airport Code">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter the Destination Airport Code">
+                                <input [(ngModel)]="logItem.ToCode" matInput placeholder="Enter the Destination Airport Code">
                             </mat-form-field>
+                            <button mat-raised-button matStepperNext>Next</button>
                         </mat-step>
-                        <mat-step label="Single Engine Flight Time">
+                        <mat-step label="Single Engine Flight Time" [optional]="true">
                             <mat-form-field>
-                                <input matInput placeholder="Enter Single Engine Day Pilot Hours">
+                                <input [(ngModel)]="logItem.SingleEngineDayPilot" matInput placeholder="Enter Single Engine Day Pilot Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Single Engine Day Dual Hours">
+                                <input [(ngModel)]="logItem.SingleEngineDayDual" matInput placeholder="Enter Single Engine Day Dual Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Single Engine Night Pilot Hours">
+                                <input [(ngModel)]="logItem.SingleEngineNightPilot" matInput placeholder="Enter Single Engine Night Pilot Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Single Engine Night Dual Hours">
+                                <input [(ngModel)]="logItem.SingleEngineNightDual" matInput placeholder="Enter Single Engine Night Dual Hours">
                             </mat-form-field>
+                            <button mat-raised-button matStepperNext>Next</button>
                         </mat-step>
-                        <mat-step label="Multi Engine Flight Time">
+                        <mat-step label="Multi Engine Flight Time" [optional]="true">
                             <mat-form-field>
-                                <input matInput placeholder="Enter Multi Engine Day Pilot Hours">
+                                <input [(ngModel)]="logItem.MultiEngineDayPilot" matInput placeholder="Enter Multi Engine Day Pilot Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Multi Engine Day Dual Hours">
+                                <input [(ngModel)]="logItem.MultiEngineDayDual" matInput placeholder="Enter Multi Engine Day Dual Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Multi Engine Day Copilot Hours">
+                                <input [(ngModel)]="logItem.MultiEngineDayCopilot" matInput placeholder="Enter Multi Engine Day Copilot Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Multi Engine Night Pilot Hours">
+                                <input [(ngModel)]="logItem.MultiEngineNightPilot" matInput placeholder="Enter Multi Engine Night Pilot Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Multi Engine Night Dual Hours">
+                                <input [(ngModel)]="logItem.MultiEngineNightDual" matInput placeholder="Enter Multi Engine Night Dual Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Multi Engine Night Copilot Hours">
+                                <input [(ngModel)]="logItem.MultiEngineNightCopilot" matInput placeholder="Enter Multi Engine Night Copilot Hours">
                             </mat-form-field>
+                            <button mat-raised-button matStepperNext>Next</button>
                         </mat-step>
-                        <mat-step label="Cross Country Flight Time">
+                        <mat-step label="Cross Country Flight Time" [optional]="true"> 
                             <mat-form-field>
-                                <input matInput placeholder="Enter Cross Country Day Pilot Hours">
+                                <input [(ngModel)]="logItem.CrossCountryDayPilot" matInput placeholder="Enter Cross Country Day Pilot Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Cross Country Day Dual Hours">
+                                <input [(ngModel)]="logItem.CrossCountryDayDual" matInput placeholder="Enter Cross Country Day Dual Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Cross Country Night Pilot Hours">
+                                <input [(ngModel)]="logItem.CrossCountryNightPilot" matInput placeholder="Enter Cross Country Night Pilot Hours">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Cross Country Night Dual Hours">
+                                <input [(ngModel)]="logItem.CrossCountryNightDual" matInput placeholder="Enter Cross Country Night Dual Hours">
                             </mat-form-field>
+                            <button mat-raised-button matStepperNext>Next</button>
                         </mat-step>
-                        <mat-step label="Instrument Flight Time">
+                        <mat-step label="Instrument Flight Time" [optional]="true">
                             <mat-form-field>
-                                <input matInput placeholder="Enter Instrument Hood Flight Time">
+                                <input [(ngModel)]="logItem.InstrumentHood" matInput placeholder="Enter Instrument Hood Flight Time">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Instrument Cloud Flight Time">
+                                <input [(ngModel)]="logItem.InstrumentCloud" matInput placeholder="Enter Instrument Cloud Flight Time">
                             </mat-form-field>
                             <mat-form-field>
-                                <input matInput placeholder="Enter Instrument Sim Flight Time">
+                                <input [(ngModel)]="logItem.InstrumentSim" matInput placeholder="Enter Instrument Sim Flight Time">
                             </mat-form-field>
+                            <button mat-raised-button matStepperNext>Next</button>
                         </mat-step>
-                        <mat-step label="Additional Information">
+                        <mat-step label="Additional Information" [optional]="true">
                             <mat-form-field>
-                                <input matInput placeholder="Enter Additional Flight Notes">
+                                <input [(ngModel)]="logItem.FlightNotes" matInput placeholder="Enter Additional Flight Notes">
                             </mat-form-field>
+                            <button mat-raised-button matStepperNext>Next</button>
                         </mat-step>
-                        <mat-step label="Done">
-                            
+                        <mat-step label="Done" [optional]="false">
+                            <button mat-raised-button>Upload</button>
                         </mat-step>
                     </mat-horizontal-stepper>
                 </mat-card-content>

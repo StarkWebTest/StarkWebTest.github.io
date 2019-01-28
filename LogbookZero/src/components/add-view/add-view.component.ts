@@ -4,8 +4,11 @@ import { Router } from '@angular/router';
 import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 import { Documents } from '../../models/documents.model';
+import { LogItem } from '../../models/logItem.model';
+
 import { CurrentUserService } from '../../services/currentUser.service';
 import { DocumentsService } from '../../services/documents.service';
+import { LogbookService } from '../../services/logbook.service'; 
 
 @Component({
     selector: 'add-view',
@@ -15,10 +18,12 @@ import { DocumentsService } from '../../services/documents.service';
 export class AddViewComponent {
     currentUser;
     document : Documents = new Documents();
+    logItem : LogItem =  new LogItem();
 
     constructor (
         private router : Router,
         private documentsService : DocumentsService,
+        private logbooksService : LogbookService,
         private currentUserService : CurrentUserService
     ) {
         this.currentUser = currentUserService.getCurrentUser();
