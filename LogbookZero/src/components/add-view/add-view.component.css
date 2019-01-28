@@ -29,6 +29,11 @@ mat-card-header {
     color: #FFF;
 }
 
+mat-card-content {
+    width: 100%;
+    margin: 0;
+}
+
 mat-card-subtitle {
     color: #FFF;
     opacity: .9;
@@ -42,10 +47,8 @@ mat-card-subtitle {
 }
 
 .form-group {
-    margin: auto;
-    width: 60%;
+    width: 100%;
     padding: 10px;
-    text-align: center;
 }
 
 .error {
@@ -65,6 +68,20 @@ mat-form-field {
     margin: 5px;
 }
 
+
+.section {
+    margin: 0;
+    font-size: 18px;
+    padding: 0;
+}
+
+.sub-section {
+    margin: 0;
+    font-size: 16px;
+    padding: 0;
+}
+
 .input-row {
+    width: 100%;
     display: flex;
 }

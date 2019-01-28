@@ -42,25 +42,97 @@
                 </mat-card-header>
                 <mat-card-content class="form-group">
                     <p class="header">Create New Flight Log</p>
-                    <div class="input-row">
-                        <mat-form-field>
-                            <input matInput [matDatepicker]="flightPicker" placeholder="Choose Flight Date">
-                            <mat-datepicker-toggle matSuffix [for]="flightPicker"></mat-datepicker-toggle>
-                            <mat-datepicker #flightPicker startView="year"></mat-datepicker>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input matInput placeholder="Enter Aircraft Type">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <input matInput placeholder="Enter Aircraft Registration">
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-select placeholder="Choose Aircraft Classification">
-                                <mat-option value="single">Single Engine</mat-option>
-                                <mat-option value="multi">Multi Engine</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
+                    <mat-horizontal-stepper [linear]="false">
+                        <mat-step label="Flight Information">
+                            <mat-form-field>
+                                <input matInput [matDatepicker]="flightPicker" placeholder="Choose Flight Date">
+                                <mat-datepicker-toggle matSuffix [for]="flightPicker"></mat-datepicker-toggle>
+                                <mat-datepicker #flightPicker startView="year"></mat-datepicker>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Aircraft Type">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Aircraft Registration">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Pilot, Instructor, Copilot, etc.">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter the Origin Airport Code">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter the Destination Airport Code">
+                            </mat-form-field>
+                        </mat-step>
+                        <mat-step label="Single Engine Flight Time">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Single Engine Day Pilot Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Single Engine Day Dual Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Single Engine Night Pilot Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Single Engine Night Dual Hours">
+                            </mat-form-field>
+                        </mat-step>
+                        <mat-step label="Multi Engine Flight Time">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Multi Engine Day Pilot Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Multi Engine Day Dual Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Multi Engine Day Copilot Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Multi Engine Night Pilot Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Multi Engine Night Dual Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Multi Engine Night Copilot Hours">
+                            </mat-form-field>
+                        </mat-step>
+                        <mat-step label="Cross Country Flight Time">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Cross Country Day Pilot Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Cross Country Day Dual Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Cross Country Night Pilot Hours">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Cross Country Night Dual Hours">
+                            </mat-form-field>
+                        </mat-step>
+                        <mat-step label="Instrument Flight Time">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Instrument Hood Flight Time">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Instrument Cloud Flight Time">
+                            </mat-form-field>
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Instrument Sim Flight Time">
+                            </mat-form-field>
+                        </mat-step>
+                        <mat-step label="Additional Information">
+                            <mat-form-field>
+                                <input matInput placeholder="Enter Additional Flight Notes">
+                            </mat-form-field>
+                        </mat-step>
+                        <mat-step label="Done">
+                            
+                        </mat-step>
+                    </mat-horizontal-stepper>
                 </mat-card-content>
             </mat-card>
         </div>

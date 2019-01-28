@@ -1,21 +1,44 @@
-import { Component, HostListener, Inject, ViewChild, ElementRef } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { DOCUMENT, formatDate } from '@angular/common';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-    selector: 'main-dark',
-    templateUrl: './main-dark.component.html',
-    styleUrls: ['./main-dark.component.css']
+    selector: 'main',
+    templateUrl: './main.component.html',
+    styleUrls: ['./main-light.component.css']
 })
-export class MainDarkComponent {
+export class MainComponent implements OnInit {
     @ViewChild('content') content: ElementRef;
     name = 'CAMERON MICHAEL STARK';
 
     isTopBarActive = false;
     isContentActive = false;
     isSidebarActive = false;
+    light = true;
+
+    constructor (
+        public sanitizer : DomSanitizer
+    ) {
+        // var localTime = Date.now();
+        // var dayTime = formatDate(new Date(1111, 11, 11, 7, 0, 0), 'HH:mm:ss ', 'en-US');
+        // var nightTime = formatDate(new Date(1111, 11, 11, 19, 0, 0), 'HH:mm:ss', 'en-US');
+        // var time = formatDate(localTime, 'HH:mm:ss', 'en-US');
+        // console.log(time, dayTime, nightTime);
+    
+        // if (time < dayTime || time > nightTime) {
+        //     console.log("dark theme");
+        //     this.light = false;
+        // } else if (time > dayTime || time < nightTime) {
+        //     console.log("light theme");
+        //     this.light = true;
+        // }
+    }
 
     ngOnInit() {
-         window.addEventListener('scroll', this.scroll, true);
+
+        
+
+        window.addEventListener('scroll', this.scroll, true);
     }
 
     ngOnDestory() {
@@ -59,7 +82,9 @@ export class MainDarkComponent {
          { language: 'Ruby On Rails', skill: '20%' },
          { language: 'R - RShiny', skill: '70%' },
          { language: 'Python - Pandas - Numpy', skill: '20%' },
-         { language: 'SQL', skill: '65%' }
+         { language: 'SQL', skill: '65%' },
+         { language: 'Ionic - TypeScript', skill: '10%' },
+         { language: 'Flutter - Dart', skill: '15%' }
      ];
 
     title = "Work Experience";
