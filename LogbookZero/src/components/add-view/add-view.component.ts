@@ -38,7 +38,16 @@ export class AddViewComponent {
         //console.log(this.document);
         this.documentsService.postNewUserDocument(this.document).subscribe(
             doc => {
-                console.log(doc);
+                //console.log(doc);
+            }
+        )
+    }
+
+    addNewLogItem() {
+        this.logItem.Email = this.currentUser;
+        this.logbooksService.postNewLogItem(this.logItem).subscribe(
+            log => {
+                //console.log(log);
             }
         )
     }

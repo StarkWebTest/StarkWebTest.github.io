@@ -1,8 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Documents } from '../../models/documents.model';
+import { LogItem } from '../../models/logItem.model';
+import { User } from '../../models/user.model';
 
 import { DocumentsService } from '../../services/documents.service';
+import { LogbookService } from '../../services/logbook.service';
+import { CurrentUserService } from '../../services/currentUser.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
     selector: 'sidenav-view',
@@ -11,10 +17,25 @@ import { DocumentsService } from '../../services/documents.service';
 })
 export class SidenavViewComponent {
     opened: boolean;
-    userInfo: {};
+    currentUser;
+    docs : Documents = new Documents();
+    logbook : LogItem = new LogItem();
+
 
     constructor(
-        private documentsService : DocumentsService
-    ){}
+        private currentUserService : CurrentUserService,
+        private logbookService : LogbookService,
+        private userService : UserService,
+        private documentsService : DocumentsService,
+        private router : Router
+    ){
+        this.currentUser = currentUserService.getCurrentUser();
+        if (this.currentUser == null) {
+            this.router.navigate(['login']);
+        } else {
+            
+        }
+
+    }
 
 } 

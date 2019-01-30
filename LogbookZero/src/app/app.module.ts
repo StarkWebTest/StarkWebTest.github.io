@@ -36,6 +36,7 @@ import { DocumentsService } from '../services/documents.service';
 import { CurrentUserService } from '../services/currentUser.service';
 import { HttpErrorHandler } from '../services/HttpErrorHandler.service';
 import { MessageService } from '../services/message.service';
+import { LogbookService } from '../services/logbook.service';
 
 const ROUTES: Route[] = [
   {
@@ -93,6 +94,7 @@ const ROUTES: Route[] = [
     UserService,
     DocumentsService,
     CurrentUserService,
+    LogbookService,
     HttpErrorHandler,
     MessageService
   ],

@@ -18,7 +18,7 @@ const httpOptions = {
 
 @Injectable()
 export class LogbookService {
-    private baseUrl = "";
+    private baseUrl = "https://logbookzero.azurewebsites.net/api/Logbook/"
     private handleError: HandleError;
 
     constructor(
@@ -26,5 +26,18 @@ export class LogbookService {
         httpErrorHandler : HttpErrorHandler
     ) {
         this.handleError = httpErrorHandler.createHandleError("LogbookSerivce");
+    }
+
+    postNewLogItem(log : LogItem) : Observable<LogItem> {
+        return this.http.post<LogItem>(this.baseUrl, log, httpOptions).pipe(
+            catchError(this.handleError("NewLog", log))
+        );
+    }
+
+    getUserLogbook(Email) : Observable<LogItem> {
+        var url = this.baseUrl + "?Email=" + Email;
+        return this.http.get<LogItem>(url, httpOptions).pipe(
+            catchError(this.handleError("getUserLogbook", Email))   
+        );
     }
 }

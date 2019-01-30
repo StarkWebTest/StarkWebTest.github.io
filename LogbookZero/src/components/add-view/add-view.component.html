@@ -136,7 +136,7 @@
                             <button mat-raised-button matStepperNext>Next</button>
                         </mat-step>
                         <mat-step label="Done" [optional]="false">
-                            <button mat-raised-button>Upload</button>
+                            <button mat-raised-button (click)="addNewLogItem()">Upload</button>
                         </mat-step>
                     </mat-horizontal-stepper>
                 </mat-card-content>
