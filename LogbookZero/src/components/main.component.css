@@ -10,14 +10,6 @@
     overflow: hidden;
 }
 
-.mat-tab-header {
-    border-bottom: 0;
-}
-
-.mat-tab-group.mat-primary .mat-ink-bar {
-    background-color: #00bcd4;
-}
-
 .mat-icon {
     cursor: pointer;
     margin-left: -5px;
@@ -36,10 +28,6 @@
     margin-left: 10px;
     font-size: 25px;
     font-weight: 100;
-}
-
-.mat-tab-group {
-    background-color: #FFF;
 }
 
 #addnew {

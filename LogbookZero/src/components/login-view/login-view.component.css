@@ -4,15 +4,19 @@
     padding-top: 10%;
 }
 
+mat-toolbar {
+    z-index: 99999;
+    background-color: #FFF;
+}
+
+.tab-view {
+    background-color: #00bcd4;
+    height: calc(100vh - 112px);
+}
+
 .mat-card {
     border-radius: 5px;
     width: 50%;
-    margin: auto;
-}
-
-.login, .create {
-    text-align: center;
-    width: 80%;
     margin: auto;
 }
 

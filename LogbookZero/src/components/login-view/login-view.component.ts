@@ -59,7 +59,6 @@ export class LoginViewComponent {
         this.userService.checkUserCredentials(this.loginInfo.email, this.loginInfo.password).subscribe(
             user => {
                 this.user = user;
-                console.log(this.user);
                 if (this.user.Pass == this.loginInfo.password) {
                     this.loading = false;
                     this.currentUserService.setCurrentUser(this.user.Email);

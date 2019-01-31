@@ -18,6 +18,8 @@ export class MainComponent {
         private currentUserService : CurrentUserService
     ) {
         this.opened = true;
+        this.currentUserService.getCurrentUserInformation();
+        
     }
 
     addNewItem() {

@@ -32,10 +32,14 @@ export class SidenavViewComponent {
         this.currentUser = currentUserService.getCurrentUser();
         if (this.currentUser == null) {
             this.router.navigate(['login']);
-        } else {
-            
-        }
+        } 
+        this.docs = this.currentUserService.getDocuments();
+        this.logbook = this.currentUserService.getLogbook();
+    }
 
+    logout() {
+        this.currentUserService.setCurrentUser('');
+        this.router.navigate(['login']);
     }
 
 } 

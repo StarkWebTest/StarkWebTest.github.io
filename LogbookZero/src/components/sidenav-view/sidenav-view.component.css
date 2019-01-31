@@ -20,6 +20,13 @@
     padding: 5px;
 }
 
+#logout {
+    width: 80%;
+    margin: auto;
+    background-color: #00bcd4;
+    color: #FFF;
+}
+
 .ratings, .recents {
     padding: 5px;
 }
@@ -34,8 +41,8 @@ hr {
 }
 
 .sidebar-footer {
-    /* background-color: lightgreen; */
     height: 60px;
+    text-align: center;
 }
 
 .header-name {

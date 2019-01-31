@@ -8,11 +8,11 @@
         <div class="ratings">
             <p class="section-header">Ratings And Licenses</p>
             <hr>
-            <div class="row">
-                <div class="col l4">
-                    <p>{{ docs.DocName }}</p>
+            <div class="row" style="text-align: center;">
+                <div class="col l5" style="padding: 0;">
+                    <p>{{ docs[0].DocName }}</p>
                 </div>
-                <div class="col l8">
+                <div class="col l7" style="padding: 0;">
                     <p>Expires in 24 days</p>
                 </div>
             </div>
@@ -21,9 +21,16 @@
         <div class="recents">
             <p class="section-header">Recent Flights</p>
             <hr>
+            <div class="row" style="text-align: center;">
+                <div class="col l5" style="padding: 0;">
+                    <p>{{ logbook[0].FlightDate }}</p>
+                </div>
+                <div class="col l7" style="padding: 0;">
+                </div>
+            </div>
         </div>
-    </div>    
+    </div>
     <div class="sidebar-footer">
-
+        <button id="logout" mat-raised-button (click)="logout()">Logout</button>
     </div>
 </div>
