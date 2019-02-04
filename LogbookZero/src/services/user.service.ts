@@ -30,10 +30,17 @@ export class UserService {
         ); 
     }
 
-    checkUserCredentials(email, password) : Observable<User> {
-        var url = this.baseUrl + '?email=' + email;
+    checkUserCredentials(email, password) {
+        var url = this.baseUrl + '?email=' + email + "&pass=" + password;
+        return this.http.get(url, httpOptions).pipe(
+            //catchError(this.handleError('checkUser', email))
+        );
+    }
+
+    getUserInfo(email) : Observable<User> {
+        var url = this.baseUrl + "?email=" + email;
         return this.http.get<User>(url, httpOptions).pipe(
-            catchError(this.handleError('checkUser', email))
+            catchError(this.handleError('GetUser', email))
         );
     }
 }

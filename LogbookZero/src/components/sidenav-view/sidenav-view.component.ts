@@ -19,7 +19,10 @@ export class SidenavViewComponent {
     opened: boolean;
     currentUser;
     docs : Documents = new Documents();
-    logbook : LogItem = new LogItem();
+    logbook : LogItem[];
+    userInfo : User = new User();
+    hours;
+    rating;
 
 
     constructor(
@@ -35,11 +38,21 @@ export class SidenavViewComponent {
         } 
         this.docs = this.currentUserService.getDocuments();
         this.logbook = this.currentUserService.getLogbook();
+        this.createProfileInfo();
     }
 
     logout() {
         this.currentUserService.setCurrentUser('');
         this.router.navigate(['login']);
+    }
+
+    createProfileInfo() {
+        this.userService.getUserInfo(this.currentUser).subscribe(
+            user => {
+                this.userInfo = user;
+            }
+        );
+
     }
 
 } 

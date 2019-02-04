@@ -4,5 +4,6 @@ export class User {
     LastName: string;
     Pass: string;
     Email: string;
+    SubscriptionType: string;
     constructor() { }
 }

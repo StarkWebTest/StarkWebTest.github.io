@@ -1,31 +1,36 @@
 <div class="view">
     <div class="sidebar-header">
-        <p class="header-name">Cameron Stark</p>
+        <p class="header-name">{{ userInfo.LastName }}, {{ userInfo.FirstName }}</p>
         <p class="header-hours">Total Hours: 2323232</p>
         <p class="header-rating">Current Rating: Instrument</p>
     </div>
     <div class="sidebar-content">
-        <div class="ratings">
-            <p class="section-header">Ratings And Licenses</p>
-            <hr>
-            <div class="row" style="text-align: center;">
-                <div class="col l5" style="padding: 0;">
-                    <p>{{ docs[0].DocName }}</p>
-                </div>
-                <div class="col l7" style="padding: 0;">
-                    <p>Expires in 24 days</p>
+        <div class="card">
+            <div class="card-header">
+                <p class="section-header">Ratings And Licenses</p>
+            </div>
+            <div class="card-content">
+                <div class="row" style="text-align: center;" *ngFor="let item of docs">
+                    <div class="col l6" style="padding: 0;">
+                        <p>{{ item.DocName }}</p>
+                    </div>
+                    <div class="col l6" style="padding: 0;">
+                        <p>Expires in 24 days</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="recents">
-            <p class="section-header">Recent Flights</p>
-            <hr>
-            <div class="row" style="text-align: center;">
-                <div class="col l5" style="padding: 0;">
-                    <p>{{ logbook[0].FlightDate }}</p>
-                </div>
-                <div class="col l7" style="padding: 0;">
+        <div class="card">
+            <div class="card-header">
+                <p class="section-header">Recent Flights</p>
+            </div>
+            <div class="card-content">
+                <div class="row" style="text-align: center;" *ngFor="let item of logbook">
+                    <div class="col l12" style="padding: 5px;">
+                        <p>{{ item.AircraftType }}</p>
+                        <p>{{ item.AircraftRegistration }}</p>
+                        <p>{{ item.FlightDate | date: 'MM/dd/yyyy' }}</p>
+                    </div>
                 </div>
             </div>
         </div>

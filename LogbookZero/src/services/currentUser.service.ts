@@ -44,7 +44,7 @@ export class CurrentUserService {
         )
         this.logbookService.getUserLogbook(this.getCurrentUser()).subscribe(
             logs => {
-                console.log(logs);
+                //console.log(logs);
                 this.setLogbook(logs);
             }
         )

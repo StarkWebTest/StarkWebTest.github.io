@@ -27,10 +27,6 @@
     color: #FFF;
 }
 
-.ratings, .recents {
-    padding: 5px;
-}
-
 .section-header {
     font-size: 18px;
     margin: 0;
@@ -58,4 +54,26 @@ hr {
 p {
     margin: 0;
     font-weight: 100;
+}
+
+.card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+    background-color: #FFF;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card-header {
+    background-color: #00bcd4;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    color: #FFF;
+    padding: 5px;
+}
+
+.card-content {
+    padding: 5px;
 }

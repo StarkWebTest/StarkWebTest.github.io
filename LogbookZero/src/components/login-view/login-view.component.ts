@@ -57,13 +57,12 @@ export class LoginViewComponent {
     checkUserCredentials() {
         this.loading = true;
         this.userService.checkUserCredentials(this.loginInfo.email, this.loginInfo.password).subscribe(
-            user => {
-                this.user = user;
-                if (this.user.Pass == this.loginInfo.password) {
+            response => {
+                if (response == "Good") {
                     this.loading = false;
-                    this.currentUserService.setCurrentUser(this.user.Email);
+                    this.currentUserService.setCurrentUser(this.loginInfo.email);
                     this.router.navigate(['home']);
-                } else {
+                } else if (response == "Not Good") {
                     this.loading = false;
                     this.errorText = "Password/Email Incorrect";
                 }
