@@ -1,5 +1,5 @@
-/*SELECT TOP 5 @Email NVARCHAR(100) */
-SELECT TOP 5
+/* SELECT @Email NVARCHAR(100) */
+SELECT 
     Email,
     FlightDate,
     AircraftType,
@@ -9,6 +9,5 @@ SELECT TOP 5
     ToCode
 FROM LogItems
 WHERE Email = 'starkc920@outlook.com'
-/*WHERE Email = @Email */
-ORDER BY FlightDate DESC
-
+GROUP BY FlightDate
+/* WHERE Email = @Email */
