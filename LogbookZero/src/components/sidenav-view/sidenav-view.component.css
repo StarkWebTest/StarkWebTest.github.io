@@ -42,12 +42,12 @@ hr {
 }
 
 .header-name {
-    margin-top: 5px;
+    margin-top: 25px;
     margin-bottom: 10px;
     font-size: 22px;
 }
 
-.header-hours, .header-rating {
+.header-hours{
     font-size: 16px;
 }
 
