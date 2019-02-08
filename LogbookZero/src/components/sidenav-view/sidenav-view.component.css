@@ -65,6 +65,12 @@ p {
     width: 100%;
 }
 
+#recentFlightsCard {
+    max-height: 475px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 .card-header {
     background-color: #00bcd4;
     border-top-left-radius: 5px;
@@ -76,4 +82,8 @@ p {
 
 .card-content {
     padding: 5px;
+}
+
+.details {
+    text-align: center;
 }

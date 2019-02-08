@@ -19,19 +19,27 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="recentFlightsCard">
             <div class="card-header">
                 <p class="section-header">Recent Flights</p>
             </div>
             <div class="card-content">
-                <div class="row" style="text-align: center;" *ngFor="let item of logbook">
-                    <div class="col l12" style="padding: 5px;">
-                        <p>{{ item.AircraftType }}</p>
-                        <p>{{ item.AircraftRegistration }}</p>
-                        <p>{{ item.FlightDate | date: 'MM/dd/yyyy' }}</p>
-                        <p>{{ item.FromCode }} to {{ item.ToCode }}</p>
-                    </div>
-                </div>
+                <mat-accordion>
+                    <mat-expansion-panel *ngFor="let item of flights">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                {{ item.AircraftType }}
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                {{ item.FlightDate | date: 'MM/dd/yyyy' }}
+                            </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <div class="details">
+                            <p style="font-size: 15px">Flight Position: {{ item.Position }}</p>
+                            <p style="font-size: 15px">From {{ item.FromCode }} To {{ item.ToCode }}</p>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
             </div>
         </div>
     </div>

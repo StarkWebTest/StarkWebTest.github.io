@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Documents } from '../../models/documents.model';
 import { LogItem } from '../../models/logItem.model';
 import { User } from '../../models/user.model';
-import { HoursResponse } from '../../models/hoursResponse.model';
+import { HoursResponse, RecentFlightsResponse } from '../../models/responses.model';
 
 import { DocumentsService } from '../../services/documents.service';
 import { LogbookService } from '../../services/logbook.service';
@@ -23,6 +23,7 @@ export class SidenavViewComponent {
     logbook : LogItem[];
     userInfo : User = new User();
     hours : HoursResponse = new HoursResponse();
+    flights : RecentFlightsResponse = new RecentFlightsResponse();
     rating;
 
 
@@ -38,7 +39,6 @@ export class SidenavViewComponent {
             this.router.navigate(['login']);
         } 
         this.docs = this.currentUserService.getDocuments();
-        this.logbook = this.currentUserService.getLogbook();
         this.createProfileInfo();
     }
 
@@ -56,6 +56,11 @@ export class SidenavViewComponent {
         this.logbookService.getTotalHours(this.currentUser).subscribe(
             res => {
                 this.hours = res[0];
+            }
+        );
+        this.logbookService.getRecentFlights(this.currentUser).subscribe(
+            response => {
+                this.flights = response;
             }
         );
 
