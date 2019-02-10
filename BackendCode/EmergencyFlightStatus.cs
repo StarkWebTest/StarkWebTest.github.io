@@ -13,14 +13,31 @@ namespace BackendCode
 
         }
 
-        public static void VerifyPressure(int Altittude, double pressure)
+
+        public static void VerifyPressure(double altittude, double pressure)
         {
-            // double correctPressure = altitudePressureIndex.FirstOrDefault((x) => x.altitude == Altittude).pressure;
-            // if (correctPressure == pressure) {
-            //     return true;
-            // } else {
-            //     return false;
-            // }
+             if (alitude == 0 && pressure == 14.7) {
+                 return true;
+             }
+             else if (altittude == 7500 && pressure == 11)
+             {
+                 return true;
+             } 
+             else if (altittude == 15000 && pressure == 8.0)
+             {
+                return true;
+             }
+             else if (altittude == 22500 && pressure == 6.2)
+             {
+                 return true;
+             }
+             else if (altittude == 30000 && pressure == 4.4){
+                 return true;
+             }
+             else 
+             {
+                 return false;
+             }
         }
 
         public static bool VerifyEngines(bool LeftEngine, bool RightEngine)
@@ -43,29 +60,51 @@ namespace BackendCode
             }
         }
 
-        public static void VerifyFuelLeak(double TotalFuel, double fuelConsumed, double fuelBurned)
+        public static void VerifyFuelLeak(double fuelBurn, string aircraftType)
         {
-            // if()
-            // {
-
-            // }else{
-
-            // }
+            if(aircraftType == "Boeing 737-800" && fuelBurn == 327)
+            {
+                return true;
+            }else if(aircraftType == "Airbus a321" && fuelBurn == 291.5)
+            {
+                return true;
+            }else{
+                return false;
+            }
+        
         }
 
-        public static void VerifyTemperature()
+        public static void VerifyTemperature(double temperature)
         {
-
+            if(temperature == 59)
+            {
+                return true;
+            }else{
+                return false;
+            }
         }
 
         public static void VerifyElectrical()
         {
-
+            if(VerifyElectrical == 0)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
         }
 
         public static void VerifyMechanical()
         {
-
+            if(mechanical == 0)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
         }
+        
     }
 }
