@@ -19,14 +19,16 @@ namespace BackendCode
                 temperture = 59.0,
                 totalFuel = 6875.0,
                 remainingFuel = 6875.0,
-                fuelBurn = 0,
+                fuelBurn = 327,
                 origin = "MCO",
                 destination = "JFK",
                 time = 0,
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 0,
@@ -46,7 +48,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 0,
@@ -66,7 +70,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 0,
@@ -86,7 +92,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 0,
@@ -106,7 +114,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 1,
@@ -126,7 +136,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 1,
@@ -146,7 +158,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 1,
@@ -166,7 +180,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 1,
@@ -186,7 +202,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 1,
@@ -206,7 +224,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 2,
@@ -226,7 +246,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 2,
@@ -246,7 +268,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 2,
@@ -266,7 +290,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             },
             {
                 phase = 2,
@@ -286,7 +312,9 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 0
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
             }
 
         };
@@ -304,14 +332,16 @@ namespace BackendCode
                  temperature = 59,
                  totalFuel = 7930,
                  remainingFuel = 7930,
-                 fuelBurn = 0,
+                 fuelBurn = 291.5,
                  origin = "DFW",
                  destination = "SEA",
                  time = 0,
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }, 
              {//done
                  phase = 0,
@@ -331,7 +361,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              },
              {//done
                  phase = 0,
@@ -351,7 +383,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              },
              {//done
                  phase = 0,
@@ -371,7 +405,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
              {//done
                  phase = 0,
@@ -391,7 +427,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
              {//done
                  phase = 1,
@@ -411,7 +449,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
              {//done
                  phase = 1,
@@ -431,7 +471,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
              {//done
                  phase = 1,
@@ -451,7 +493,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
             {//done
                  phase = 1,
@@ -471,7 +515,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
             {//done
                  phase = 1,
@@ -480,7 +526,7 @@ namespace BackendCode
                  altitude = 30000,
                  totalDistance = 2091.8,
                  remainingDistance = 418.36,
-                 pressure = 14.7,
+                 pressure = 4.4,
                  temperature = 59,
                  totalFuel = 7930,
                  remainingFuel = 5306.5,
@@ -491,7 +537,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
             {//done
                  phase = 2,
@@ -511,7 +559,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
             {//done
                  phase = 2,
@@ -531,7 +581,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
             {//done
                  phase = 2,
@@ -551,7 +603,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
             {//done
                  phase = 2,
@@ -571,7 +625,9 @@ namespace BackendCode
                  weight = 106900,
                  leftEngine = true,
                  rightEngine = true,
-                 emergency = 0
+                 emergency = 0,
+                 electrical = 0,
+                mechanical = 0
              }
         };
     
@@ -588,14 +644,16 @@ namespace BackendCode
                 temperature = 59,
                 totalFuel = 6875,
                 remainingFuel = 0,
-                fuelBurn = 0,
+                fuelBurn = 327,
                 origin = "LAX",
                 destination = "MCI",
                 time = 0,
                 weight = 0,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,               
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0              
             },
             { //done
                 phase = 0,
@@ -615,9 +673,11 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1, 
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0 
             },
-                { //done
+            { //done
                 phase = 0,
                 aircraftType = "Boeing 737-800",
                 velocity = 10.8,
@@ -635,10 +695,12 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1, 
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0 
             },
-    { 
-            phase = 0,
+            { 
+                phase = 0,
                 aircraftType = "Boeing 737-800",
                 velocity = 16.2,
                 altitude = 22500,
@@ -655,10 +717,12 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
 
-    },
-    { //done
+            },
+            { //done
                phase = 0,
                 aircraftType = "Boeing 737-800",
                 velocity = 21.6,
@@ -676,10 +740,12 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
 
-    },
-    { //done
+             },
+            { //done
                 phase = 1,
                 aircraftType = "Boeing 737-800",
                 velocity = 21.6,
@@ -697,9 +763,12 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
 
-    },//done
+            },//done
+            {
                 phase = 1,
                 aircraftType = "Boeing 737-800",
                 velocity = 21.6,
@@ -717,9 +786,12 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
 
-    },
+            },
+            {
                 phase = 1,
                 aircraftType = "Boeing 737-800",
                 velocity = 21.6,
@@ -737,10 +809,12 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
 
-    },
-    { //done
+            },
+            { //done
                 phase = 1,
                 aircraftType = "Boeing 737-800",
                 velocity = 21.6,
@@ -758,9 +832,11 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,
-    },
-    { //done
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
+            },
+            { //done
                 phase = 1,
                 aircraftType = "Boeing 737-800",
                 velocity = 21.6,
@@ -778,8 +854,120 @@ namespace BackendCode
                 weight = 90710,
                 leftEngine = true,
                 rightEngine = true,
-                emergency = 1,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
+            },
+            {
+                phase = 1,
+                aircraftType = "Boeing 737-800",
+                velocity = 21.6,
+                altitude = 30000,
+                totalDistance = 1641.1,
+                time = 156,
+                remainingDistance = 524,
+                pressure = 4.4,
+                temperature = 59,
+                totalFuel = 6875,
+                remainingFuel = 4261,
+                fuelBurn = 327,
+                origin = LAX,
+                destination = MCI,
+                weight = 90710,
+                leftEngine = true,
+                rightEngine = true,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
+            },
+            { //done
+                phase = 2,
+                aircraftType = "Boeing 737-800",
+                velocity = 16.2,
+                altitude = 22500,
+                totalDistance = 1641.1,
+                time = 170,
+                remainingDistance = 243,
+                pressure = 6.2, 
+                temperature = 59,
+                totalFuel = 6875,
+                remainingFuel = 3934,
+                fuelBurn = 327,
+                origin = LAX,
+                destination = MCI,
+                weight = 90710,
+                leftEngine = true,
+                rightEngine = true,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
+            },
+            { //done
+                phase = 2,
+                aircraftType = "Boeing 737-800",
+                velocity = 10.8,
+                altitude = 15000,
+                totalDistance = 1641.1,
+                time = 184,
+                remainingDistance = 163,
+                pressure = 8.0, 
+                temperature = 59,
+                totalFuel = 6875,
+                remainingFuel = 3607,
+                fuelBurn = 327,
+                origin = LAX,
+                destination = MCI,
+                weight = 90710,
+                leftEngine = true,
+                rightEngine = true,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
+            },
+            {
+                phase = 2,
+                aircraftType = "Boeing 737-800",
+                velocity = 5.4,
+                altitude = 7500,
+                totalDistance = 1641.1,
+                time = 198,
+                remainingDistance = 81,
+                pressure = 10.9, 
+                temperature = 59,
+                totalFuel = 6875,
+                remainingFuel = 3278,
+                fuelBurn = 327,
+                origin = LAX,
+                destination = MCI,
+                weight = 90710,
+                leftEngine = true,
+                rightEngine = true,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
+            },
+            {
+                phase = 2,
+                aircraftType = "Boeing 737-800",
+                velocity = 0,
+                altitude = 0,
+                totalDistance = 1641.1,
+                time = 212,
+                remainingDistance = 0,
+                pressure = 14.7, 
+                temperature = 59,
+                totalFuel = 6875,
+                remainingFuel = 2951,
+                fuelBurn = 327,
+                origin = LAX,
+                destination = MCI,
+                weight = 90710,
+                leftEngine = true,
+                rightEngine = true,
+                emergency = 0,
+                electrical = 0,
+                mechanical = 0
+            },
+        }
     }
-    }
-    
 }
