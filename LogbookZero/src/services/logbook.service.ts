@@ -7,7 +7,7 @@ import { HttpErrorHandler, HandleError } from '../services/HttpErrorHandler.serv
 
 import { LogItem } from '../models/logItem.model';
 import { CurrentUserService } from '../services/currentUser.service';
-import { HoursResponse } from '../models/hoursResponse.model';
+import { HoursResponse, RecentFlightsResponse } from '../models/responses.model';
 
 
 
@@ -46,6 +46,13 @@ export class LogbookService {
         var url = this.baseUrl + "GetHours/?Email=" + Email;
         return this.http.get<HoursResponse>(url, httpOptions).pipe(
             catchError(this.handleError("GetTotalHours", Email))
+        );
+    }
+
+    getRecentFlights(Email) : Observable<RecentFlightsResponse> {
+        var url = this.baseUrl + "GetRecents/?Email=" + Email;
+        return this.http.get<RecentFlightsResponse>(url, httpOptions).pipe(
+            catchError(this.handleError("getRecents", Email))
         );
     }
 }
