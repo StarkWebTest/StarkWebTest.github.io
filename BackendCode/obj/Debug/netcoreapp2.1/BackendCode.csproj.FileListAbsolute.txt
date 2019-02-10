@@ -1,0 +1,11 @@
+/Users/stark/StarkDev/project/BackendCode/bin/Debug/netcoreapp2.1/BackendCode.deps.json
+/Users/stark/StarkDev/project/BackendCode/bin/Debug/netcoreapp2.1/BackendCode.runtimeconfig.json
+/Users/stark/StarkDev/project/BackendCode/bin/Debug/netcoreapp2.1/BackendCode.runtimeconfig.dev.json
+/Users/stark/StarkDev/project/BackendCode/bin/Debug/netcoreapp2.1/BackendCode.dll
+/Users/stark/StarkDev/project/BackendCode/bin/Debug/netcoreapp2.1/BackendCode.pdb
+/Users/stark/StarkDev/project/BackendCode/obj/Debug/netcoreapp2.1/BackendCode.csprojAssemblyReference.cache
+/Users/stark/StarkDev/project/BackendCode/obj/Debug/netcoreapp2.1/BackendCode.csproj.CoreCompileInputs.cache
+/Users/stark/StarkDev/project/BackendCode/obj/Debug/netcoreapp2.1/BackendCode.AssemblyInfoInputs.cache
+/Users/stark/StarkDev/project/BackendCode/obj/Debug/netcoreapp2.1/BackendCode.AssemblyInfo.cs
+/Users/stark/StarkDev/project/BackendCode/obj/Debug/netcoreapp2.1/BackendCode.dll
+/Users/stark/StarkDev/project/BackendCode/obj/Debug/netcoreapp2.1/BackendCode.pdb
