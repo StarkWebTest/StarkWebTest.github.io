@@ -39,6 +39,7 @@ export class CurrentUserService {
     getCurrentUserInformation() {
         this.documentsService.getUserDocuments(this.getCurrentUser()).subscribe(
             docs => {
+                console.log(docs);
                 this.setDocuments(docs);
             }
         )
