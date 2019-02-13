@@ -68,6 +68,9 @@ mat-form-field {
     margin: 5px;
 }
 
+.loading {
+    margin: auto;
+}
 
 .section {
     margin: 0;
@@ -84,4 +87,10 @@ mat-form-field {
 .input-row {
     width: 100%;
     display: flex;
+}
+
+.row {
+    width: 100%;
+    display: inline-flex;
+    margin: 0;
 }

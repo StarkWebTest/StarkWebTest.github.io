@@ -9,6 +9,10 @@ mat-toolbar {
     background-color: #FFF;
 }
 
+.mat-tab-body {
+    z-index: 1;
+}
+
 .tab-view {
     background-color: #00bcd4;
     height: calc(100vh - 112px);

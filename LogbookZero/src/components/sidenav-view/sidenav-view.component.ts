@@ -38,7 +38,7 @@ export class SidenavViewComponent {
         if (this.currentUser == null) {
             this.router.navigate(['login']);
         } 
-        this.docs = this.currentUserService.getDocuments();
+        //this.docs = this.currentUserService.getDocuments();
         this.createProfileInfo();
     }
 

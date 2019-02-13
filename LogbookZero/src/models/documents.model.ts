@@ -3,5 +3,5 @@ export class Documents {
     Email: string;
     DocName: string;
     DateIssued: Date;
-    DateExpire: Date;
+    RenewalDate: Date;
 }

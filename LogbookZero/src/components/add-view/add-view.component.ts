@@ -19,6 +19,7 @@ export class AddViewComponent {
     currentUser;
     document : Documents = new Documents();
     logItem : LogItem =  new LogItem();
+    loading = false;
 
     constructor (
         private router : Router,
@@ -36,17 +37,22 @@ export class AddViewComponent {
     addNewDocument() {
         this.document.Email = this.currentUser;
         //console.log(this.document);
+        this.loading = true;
         this.documentsService.postNewUserDocument(this.document).subscribe(
             doc => {
+                this.loading = false;
                 //console.log(doc);
+                
             }
         )
     }
 
     addNewLogItem() {
         this.logItem.Email = this.currentUser;
+        this.loading = true;
         this.logbooksService.postNewLogItem(this.logItem).subscribe(
             log => {
+                this.loading = false;
                 //console.log(log);
             }
         )
